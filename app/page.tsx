@@ -6,7 +6,6 @@ import ButtonScroll from './ui/buttons/buttonScroll'
 import ButtonText from './ui/buttons/buttonText'
 import AboutMeContainer from './ui/aboutMeContainer'
 import ContactForm from './ui/contactForm'
-import Icon from './ui/icon'
 import Paragraph from './ui/paragraph'
 import Logo from './ui/logo'
 import ProjectsContainer from './ui/projectsContainer'
@@ -24,7 +23,6 @@ export default function Home() {
 
         <AboutMeContainer />
         <ContactForm />
-        <Icon />
         <Logo />
         <Paragraph />
         <ProjectsContainer />
