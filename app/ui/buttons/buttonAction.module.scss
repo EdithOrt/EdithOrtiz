@@ -1,0 +1,12 @@
+@import '../styles/variables.module.scss';
+@import '../styles/mixins.module.scss';
+
+.button {
+  padding: $padding-y $padding-x;
+  @include button-styles;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}

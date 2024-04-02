@@ -1,8 +1,13 @@
+import styles from './buttonAction.module.scss'
+import { roboto } from '../fonts'
+
 const ButtonAction = () => {
   return (
-    <div>
+    <button
+      className={`${roboto.className} ${styles.button}`}
+    >
       <p>Action Button</p>
-    </div>
+    </button>
   )
 }
 

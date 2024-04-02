@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import main from '@/app/styles/main.module.scss'
+import styles from '@/app/page.module.scss'
 import ButtonAction from './ui/buttons/buttonAction'
 import ButtonIcon from './ui/buttons/buttonIcon'
 import ButtonScroll from './ui/buttons/buttonScroll'
@@ -15,8 +15,8 @@ import Title from './ui/title'
 
 export default function Home() {
   return (
-    <main className={main.body}>
-      <div className={'styles.center'}>
+    <main className={styles.body}>
+      <div className={styles.center}>
         <ButtonAction />
         <ButtonIcon />
         <ButtonScroll />
