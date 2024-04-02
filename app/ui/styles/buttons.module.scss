@@ -28,3 +28,20 @@
 .rightButton {
   border-radius: $right-radius;
 }
+
+.buttonScroll {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  p {
+    writing-mode: vertical-lr;
+    text-align: center;
+    margin: auto;
+    margin-bottom: $size-12;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+}
