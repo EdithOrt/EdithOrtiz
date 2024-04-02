@@ -1,44 +1,35 @@
 import Image from 'next/image'
 import main from '@/app/styles/main.module.scss'
+import ButtonAction from './ui/buttons/buttonAction'
+import ButtonIcon from './ui/buttons/buttonIcon'
+import ButtonScroll from './ui/buttons/buttonScroll'
+import ButtonText from './ui/buttons/buttonText'
+import AboutMeContainer from './ui/aboutMeContainer'
+import ContactForm from './ui/contactForm'
+import Icon from './ui/icon'
+import Paragraph from './ui/paragraph'
+import Logo from './ui/logo'
+import ProjectsContainer from './ui/projectsContainer'
+import SkillsContainer from './ui/skillsContainer'
+import Title from './ui/title'
 
 export default function Home() {
   return (
     <main className={main.body}>
-      <div className={'styles.description'}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={'styles.code'}>
-            app/page.tsx
-          </code>
-        </p>
-        <div>
-          <a
-            href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            By{' '}
-            <Image
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              className={'styles.vercelLogo'}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
       <div className={'styles.center'}>
-        <Image
-          className={'styles.logo'}
-          src='/next.svg'
-          alt='Next.js Logo'
-          width={180}
-          height={37}
-          priority
-        />
+        <ButtonAction />
+        <ButtonIcon />
+        <ButtonScroll />
+        <ButtonText />
+
+        <AboutMeContainer />
+        <ContactForm />
+        <Icon />
+        <Logo />
+        <Paragraph />
+        <ProjectsContainer />
+        <SkillsContainer />
+        <Title />
       </div>
     </main>
   )
