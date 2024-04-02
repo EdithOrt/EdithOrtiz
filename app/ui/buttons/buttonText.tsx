@@ -1,8 +1,12 @@
+import styles from '@/app/ui/styles/buttons.module.scss'
+
 const ButtonText = () => {
   return (
-    <div>
-      <p>Text Button</p>
-    </div>
+    <button
+      className={`${styles.buttonText} ${styles.leftButton}`}
+    >
+      <p>INICIO</p>
+    </button>
   )
 }
 

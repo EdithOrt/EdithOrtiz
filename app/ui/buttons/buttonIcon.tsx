@@ -1,8 +1,13 @@
+import { SVGComponent } from '../svgComponent'
+import styles from '@/app/ui/styles/buttons.module.scss'
+
 const ButtonIcon = () => {
   return (
-    <div>
-      <p>Button Icon</p>
-    </div>
+    <button
+      className={`${styles.buttonIcon} ${styles.rightButton}`}
+    >
+      <SVGComponent />
+    </button>
   )
 }
 

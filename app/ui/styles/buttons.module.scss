@@ -1,0 +1,58 @@
+@import './variables.module.scss';
+@import './mixins.module.scss';
+
+.button {
+  padding: $size-14 $size-40;
+  @include button-styles;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.buttonIcon {
+  padding: $size-10;
+  @include button-styles;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.buttonScroll {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  p {
+    writing-mode: vertical-lr;
+    text-align: center;
+    margin: auto;
+    margin-bottom: $size-12;
+    letter-spacing: 0.5px;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+}
+
+.buttonText {
+  @include button-styles;
+  padding: $size-16 $size-12;
+  box-shadow: $button-shadow;
+  font-weight: 700;
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.leftButton {
+  border-radius: $left-radius;
+}
+
+.rightButton {
+  border-radius: $right-radius;
+}

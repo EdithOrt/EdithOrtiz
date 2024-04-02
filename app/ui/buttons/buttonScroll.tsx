@@ -1,8 +1,13 @@
+import { SVGComponent } from '../svgComponent'
+import styles from '@/app/ui/styles/buttons.module.scss'
+
 const ButtonScroll = () => {
   return (
-    <div>
-      <p>Button scroll</p>
-    </div>
+    <button className={styles.buttonScroll}>
+      <p>SCROLL</p>
+
+      <SVGComponent />
+    </button>
   )
 }
 
