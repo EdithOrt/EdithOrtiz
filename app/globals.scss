@@ -1,10 +1,11 @@
 @import './ui/styles/variables.module.scss';
-:root  {
+:root {
   background: rgb(0, 0, 0);
   background: linear-gradient(
-    83deg,
+    90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(38, 38, 47, 1) 49%,
+    rgba(38, 38, 47, 1) 60%,
     rgba(42, 47, 48, 1) 100%
   );
 }
