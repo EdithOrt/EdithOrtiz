@@ -1,6 +1,6 @@
 import React, { SVGProps } from 'react'
 
-const getIcon = name => {
+const getIcon = (name: any) => {
   return (
     <svg
       width='24'
@@ -19,6 +19,6 @@ const getIcon = name => {
 
 export const SVGComponent: React.FC<
   SVGProps<SVGElement>
-> = ({ width, height, icon }) => {
+> = icon => {
   return <>{getIcon(icon)}</>
 }
