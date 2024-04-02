@@ -1,0 +1,30 @@
+@import './variables.module.scss';
+@import './mixins.module.scss';
+
+.button {
+  padding: $size-14 $size-40;
+  @include button-styles;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.buttonIcon {
+  padding: $size-10;
+  @include button-styles;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.leftButton {
+  border-radius: $left-radius;
+}
+
+.rightButton {
+  border-radius: $right-radius;
+}

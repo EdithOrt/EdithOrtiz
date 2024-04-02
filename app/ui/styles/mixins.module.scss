@@ -1,8 +1,10 @@
+@import './variables.module.scss';
+
 @mixin button-styles {
   border: none;
-  border-radius: 6px;
+  border-radius: $size-6;
   background-color: $black;
-  font-size: 12px;
+  font-size: $size-12;
   font-weight: 500;
   cursor: pointer;
 }
