@@ -21,14 +21,6 @@
   }
 }
 
-.leftButton {
-  border-radius: $left-radius;
-}
-
-.rightButton {
-  border-radius: $right-radius;
-}
-
 .buttonScroll {
   background-color: transparent;
   border: none;
@@ -39,9 +31,28 @@
     text-align: center;
     margin: auto;
     margin-bottom: $size-12;
+    letter-spacing: 0.5px;
   }
 
   &:hover {
     font-weight: 700;
   }
+}
+
+.buttonText {
+  @include button-styles;
+  padding: $size-16 $size-12;
+  box-shadow: $button-shadow;
+  font-weight: 700;
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+}
+
+.leftButton {
+  border-radius: $left-radius;
+}
+
+.rightButton {
+  border-radius: $right-radius;
 }
