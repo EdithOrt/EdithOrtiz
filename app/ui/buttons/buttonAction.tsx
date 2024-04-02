@@ -1,4 +1,4 @@
-import styles from './buttonAction.module.scss'
+import styles from '@/app/ui/styles/buttonAction.module.scss'
 import { roboto } from '../fonts'
 
 const ButtonAction = () => {
