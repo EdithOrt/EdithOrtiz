@@ -10,3 +10,21 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@mixin responsive($size) {
+  @if size == l {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if size == m {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if size == s {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+}

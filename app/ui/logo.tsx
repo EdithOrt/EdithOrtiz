@@ -1,10 +1,12 @@
 import logo from '@/public/logo-eoc.svg'
+import styles from '@/app/ui/styles/home.module.scss'
 
 const Logo = () => {
   return (
-    <div>
-      <img src={logo.src} />
-    </div>
+    <img
+      src={logo.src}
+      className={styles.logo}
+    />
   )
 }
 
