@@ -56,3 +56,9 @@
 .rightButton {
   border-radius: $right-radius;
 }
+
+.buttonScrollContainer {
+  position: fixed;
+  bottom: $size-40;
+  right: $size-10;
+}
