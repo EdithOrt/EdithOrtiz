@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.scss'
 import { roboto } from './ui/fonts'
+import { Navbar } from './ui/navbar'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={roboto.className}>
+        <Navbar />
         {children}
       </body>
     </html>

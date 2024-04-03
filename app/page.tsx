@@ -12,14 +12,14 @@ import ProjectsContainer from './ui/projectsContainer'
 import SkillsContainer from './ui/skillsContainer'
 import Title from './ui/title'
 
+import HomeContainer from './ui/homeContainer'
+
 export default function Home() {
   return (
     <main className={styles.body}>
       <div className={styles.center}>
+        <HomeContainer />
         <ButtonAction />
-        <ButtonIcon />
-        <ButtonScroll />
-        <ButtonText />
 
         <AboutMeContainer />
         <ContactForm />
