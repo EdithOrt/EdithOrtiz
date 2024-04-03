@@ -23,7 +23,6 @@ export default function Home() {
 
         <AboutMeContainer />
         <ContactForm />
-        <Logo />
         <Paragraph />
         <ProjectsContainer />
         <SkillsContainer />

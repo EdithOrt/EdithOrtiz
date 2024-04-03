@@ -1,7 +1,9 @@
+import logo from '@/public/logo-eoc.svg'
+
 const Logo = () => {
   return (
     <div>
-      <p>Logo</p>
+      <img src={logo.src} />
     </div>
   )
 }
