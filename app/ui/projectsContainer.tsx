@@ -3,6 +3,7 @@ import Title from './title'
 import Paragraph from './paragraph'
 import Image from 'next/image'
 import metaregistry1 from '@/public/projects/metaregistry.png'
+import ButtonAction from './buttons/buttonAction'
 
 const ProjectsContainer = () => {
   return (
@@ -20,6 +21,10 @@ const ProjectsContainer = () => {
           </div>
 
           <Paragraph />
+
+          <div className={styles.button}>
+            <ButtonAction />
+          </div>
         </div>
 
         <div className={styles.carouselContainer}>
@@ -33,7 +38,9 @@ const ProjectsContainer = () => {
       </article>
 
       <article className={styles.technologies}>
-        <p>Technologies</p>
+        <p className={styles.technologiesText}>
+          Technologies
+        </p>
 
         <div>
           <p>icon</p>
