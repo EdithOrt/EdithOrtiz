@@ -1,11 +1,22 @@
 @import './variables.module.scss';
+@import './mixins.module.scss';
 
 .title {
-  font-size: $size-36;
+  font-size: $size-24;
   font-weight: $text-bold;
 }
 
 .paragraph {
-  font-size: $size-16;
+  font-size: $size-12;
   font-weight: $text-ligth;
+}
+
+@include responsive(l) {
+  .title {
+    font-size: $size-36;
+  }
+
+  .paragraph {
+    font-size: $size-16;
+  }
 }
