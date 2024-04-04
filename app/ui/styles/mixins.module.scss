@@ -11,20 +11,13 @@
   cursor: pointer;
 }
 
-@mixin responsive($size) {
-  @if size == l {
-    @media (min-width: 1280px) {
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $value) {
       @content;
     }
-  }
-  @if size == m {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-  @if size == s {
-    @media (min-width: 640px) {
-      @content;
-    }
+  } @else {
+    @error "Unknown breakpoint: #{$breakpoint}.";
   }
 }

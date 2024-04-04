@@ -1,3 +1,5 @@
+@import './mixins.module.scss';
+
 .main {
   height: 100vh;
   display: flex;
@@ -6,6 +8,13 @@
 }
 
 .logo {
-  width: 500px;
-  height: 500px;
+  width: 230px;
+  height: 230px;
+}
+
+@include responsive('l') {
+  .logo {
+    width: 500px;
+    height: 500px;
+  }
 }
