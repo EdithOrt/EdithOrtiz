@@ -26,9 +26,23 @@
 .softskills {
   display: flex;
   gap: $size-12;
+  flex-wrap: wrap;
 }
 
 .skills {
   display: flex;
   gap: $size-8 $size-12;
+  flex-wrap: wrap;
+}
+
+@include responsive(m) {
+  .main {
+    padding: $container-l-padding;
+    gap: $size-38;
+    margin-top: $size-70;
+  }
+
+  .softskills {
+    width: 300px;
+  }
 }

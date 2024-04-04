@@ -48,7 +48,7 @@
   .main {
     display: flex;
     flex-direction: column;
-    padding: 0 $size-70;
+    padding: $container-l-padding;
   }
 
   .projectContainer {

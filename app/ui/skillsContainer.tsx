@@ -1,6 +1,7 @@
 import styles from '@/app/ui/styles/skills.module.scss'
 import Paragraph from './paragraph'
 import Title from './title'
+import { SVGComponent } from './svgComponent'
 
 const SkillsContainer = () => {
   return (
@@ -11,9 +12,21 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.skills}`}
         >
-          <p>icon</p>
-          <p>icon</p>
-          <p>icon</p>
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
+          <SVGComponent />
         </article>
       </section>
 
