@@ -1,8 +1,12 @@
-const Paragraph = () => {
+import styles from '@/app/ui/styles/texts.module.scss'
+
+const Paragraph = ({
+  text
+}: {
+  text: string
+}) => {
   return (
-    <div>
-      <p>Paragraph</p>
-    </div>
+    <p className={styles.paragraph}>{text}</p>
   )
 }
 

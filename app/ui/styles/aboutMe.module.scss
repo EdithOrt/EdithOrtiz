@@ -1,0 +1,90 @@
+@import './variables.module.scss';
+@import './mixins.module.scss';
+
+.main {
+  height: $fill-window;
+  background-color: #648e64;
+}
+
+.title {
+  width: 250px;
+  margin-bottom: 24px;
+  padding: $container-padding;
+  margin-top: $size-120;
+  display: inline-block;
+}
+
+.content {
+  display: flex;
+  margin-bottom: $size-24;
+
+  .title {
+    display: none;
+  }
+
+  .paragraph {
+    width: 196px;
+    margin-left: $size-20;
+
+    .button {
+      display: none;
+    }
+  }
+
+  .photo {
+    display: block;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  display: none;
+}
+
+@include responsive(m) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    padding-left: $size-70;
+    .title {
+      display: block;
+      width: 300px;
+      padding: 0;
+    }
+    .paragraph {
+      width: 400px;
+      margin-left: 0;
+
+      .button {
+        display: flex;
+        margin-top: $size-40;
+        justify-content: center;
+      }
+    }
+
+    .photo {
+      display: none;
+    }
+  }
+
+  .button {
+    display: none;
+  }
+
+  .photo {
+    display: block;
+  }
+}

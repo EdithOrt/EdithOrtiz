@@ -1,7 +1,9 @@
 $black: #202020;
+$white: #ffffff;
 
 $size-4: 4px;
 $size-6: 6px;
+$size-8: 8px;
 $size-10: 10px;
 $size-12: 12px;
 $size-14: 14px;
@@ -10,13 +12,36 @@ $size-20: 20px;
 $size-24: 24px;
 $size-30: 30px;
 $size-36: 36px;
+$size-38: 38px;
 $size-40: 40px;
+$size-46: 46px;
+$size-50: 50px;
+$size-58: 58px;
+$size-70: 70px;
+$size-80: 80px;
+$size-90: 90px;
+$size-120: 120px;
+
+$fill-window: 100vh;
+
+$text-bold: 700;
+$text-medium: 500;
+$text-ligth: 300;
 
 $border-radius: $size-6;
 $left-radius: 0 $size-6 $size-6 0;
 $right-radius: $size-6 0 0 $size-6;
 
+$container-padding: 0 $size-30 0 $size-30;
+$container-l-padding: 0 $size-70;
+
 $button-shadow: 0 $size-4 $size-4 0
   rgba(0, 0, 0, 0.25);
 $button-shadow-hover: inset 0 $size-4 $size-4 0
   rgba(0, 0, 0, 0.25);
+
+$breakpoints: (
+  l: 1280px,
+  m: 768px,
+  s: 640px
+);

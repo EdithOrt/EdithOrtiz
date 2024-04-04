@@ -1,6 +1,8 @@
+import styles from '@/app/ui/styles/contact.module.scss'
+
 const ContactForm = () => {
   return (
-    <div>
+    <div className={styles.main}>
       <p>Contact Form</p>
     </div>
   )
