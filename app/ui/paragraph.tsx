@@ -15,15 +15,7 @@ const Paragraph = () => {
       massa. Nam sagittis urna eget nunc
       vulputate, vel fermentum tortor imperdiet.
       Donec sed laoreet ligula, finibus luctus
-      lectus. In vestibulum erat lacus, in
-      sagittis metus consequat non. Sed sit amet
-      ligula in urna cursus convallis. Proin id
-      elementum justo. Donec in ultrices nisi.
-      Pellentesque mauris nulla, pellentesque et
-      lectus vel, sagittis sagittis urna. Ut ante
-      leo, dictum eget facilisis et, sollicitudin
-      et est. Donec posuere sem at tellus
-      venenatis, sit amet interdum lectus sodales.
+      lectus.
     </p>
   )
 }
