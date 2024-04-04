@@ -12,14 +12,14 @@
 }
 
 .titleContainer {
-  padding: 0 $size-58 0 $size-30;
+  padding: $container-padding;
   margin-bottom: $size-40;
   margin-top: $size-80;
 }
 
 .textContainer {
   order: 2;
-  padding: 0 $size-58 0 $size-30;
+  padding: $container-padding;
   margin-top: $size-24;
 
   .title {

@@ -1,0 +1,34 @@
+@import './variables.module.scss';
+@import './buttons.module.scss';
+
+.main {
+  height: $fill-window;
+  margin-top: $size-120;
+  display: flex;
+  flex-direction: column;
+  gap: $size-50;
+  padding: $container-padding;
+}
+
+.section {
+}
+
+.content {
+  margin-top: $size-30;
+}
+
+.language {
+  p:first-of-type {
+    margin-bottom: $size-20;
+  }
+}
+
+.softskills {
+  display: flex;
+  gap: $size-12;
+}
+
+.skills {
+  display: flex;
+  gap: $size-8 $size-12;
+}
