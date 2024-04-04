@@ -19,14 +19,10 @@ export default function Home() {
     <main className={styles.body}>
       <div className={styles.center}>
         <HomeContainer />
-        <ButtonAction />
-
-        <AboutMeContainer />
-        <ContactForm />
-        <Paragraph />
         <ProjectsContainer />
         <SkillsContainer />
-        <Title />
+        <AboutMeContainer />
+        <ContactForm />
       </div>
     </main>
   )
