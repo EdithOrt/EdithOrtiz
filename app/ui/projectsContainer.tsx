@@ -7,7 +7,10 @@ import ButtonAction from './buttons/buttonAction'
 
 const ProjectsContainer = () => {
   return (
-    <section className={styles.main}>
+    <section
+      className={styles.main}
+      id='projects'
+    >
       <article
         className={styles.projectContainer}
       >

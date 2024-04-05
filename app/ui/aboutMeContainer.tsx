@@ -6,7 +6,10 @@ import ButtonAction from './buttons/buttonAction'
 
 const AboutMeContainer = () => {
   return (
-    <div className={styles.main}>
+    <section
+      className={styles.main}
+      id='aboutMe'
+    >
       <div className={styles.title}>
         <Title text='EDITH ORTIZ CORTÉS' />
       </div>
@@ -49,7 +52,7 @@ const AboutMeContainer = () => {
           height={324}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

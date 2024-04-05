@@ -4,7 +4,10 @@ import ButtonAction from './buttons/buttonAction'
 
 const ContactForm = () => {
   return (
-    <div className={styles.main}>
+    <section
+      className={styles.main}
+      id='form'
+    >
       <div className={styles.container}>
         <div className={styles.title}>
           <Title text='TRABAJEMOS JUNTOS(AS)' />
@@ -26,7 +29,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   )
 }
 
