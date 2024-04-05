@@ -3,4 +3,42 @@
 
 .main {
   height: $fill-window;
+  padding: $container-padding;
+}
+
+.title {
+  width: 168px;
+  margin-top: $size-120;
+  display: inline-block;
+}
+
+.form {
+  margin-top: $size-40;
+  display: flex;
+  flex-direction: column;
+  gap: $size-24;
+}
+
+.input {
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+@include responsive(m) {
+  .main {
+    display: flex;
+    justify-content: flex-end;
+    padding: $container-l-padding;
+  }
+
+  .title {
+    width: 241px;
+  }
+
+  .container {
+    width: 50%;
+  }
 }
