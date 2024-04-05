@@ -4,6 +4,7 @@ import { roboto } from './ui/fonts'
 import { Navbar } from './ui/navbar'
 import ButtonScroll from './ui/buttons/buttonScroll'
 import styles from '@/app/ui/styles/buttons.module.scss'
+import ButtonText from './ui/buttons/buttonText'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,6 +19,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={roboto.className}>
+        <div className={styles.buttonHome}>
+          <ButtonText />
+        </div>
+
         <Navbar />
         {children}
         <div

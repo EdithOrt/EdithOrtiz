@@ -2,11 +2,13 @@
 
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: fixed;
+  height: 70vh;
   z-index: 2;
   top: 0;
-  width: 100%;
+  right: 0;
 }
 
 .containerMenu {
@@ -25,8 +27,4 @@
   &:first-of-type {
     margin-top: $size-30;
   }
-}
-
-.home {
-  margin-top: $size-30;
 }
