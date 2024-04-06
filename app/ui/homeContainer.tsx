@@ -3,7 +3,10 @@ import Logo from './logo'
 
 const HomeContainer = () => {
   return (
-    <div className={styles.main}>
+    <div
+      className={styles.main}
+      id='home'
+    >
       <Logo />
     </div>
   )

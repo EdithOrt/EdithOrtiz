@@ -5,7 +5,10 @@ import { SVGComponent } from './svgComponent'
 
 const SkillsContainer = () => {
   return (
-    <div className={styles.main}>
+    <div
+      className={styles.main}
+      id='skills'
+    >
       <section className={styles.section}>
         <Title text='SKILLS' />
 
