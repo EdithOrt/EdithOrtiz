@@ -6,7 +6,7 @@ const ContactForm = () => {
   return (
     <section
       className={styles.main}
-      id='form'
+      id='contact'
     >
       <div className={styles.container}>
         <div className={styles.title}>
