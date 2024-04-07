@@ -11,13 +11,52 @@
   }
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .buttonIcon {
+  width: $size-58;
+  height: $size-46;
   padding: $size-10;
   @include button-styles;
   box-shadow: $button-shadow;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+
+  .icon {
+    margin-right: $size-24;
+  }
 
   &:hover {
     box-shadow: $button-shadow-hover;
+    width: 170px;
+
+    .text {
+      animation-name: opacity;
+      animation-duration: 0.5s;
+    }
+  }
+
+  .text {
+    // opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: $text-bold;
+    font-size: $size-16;
   }
 }
 

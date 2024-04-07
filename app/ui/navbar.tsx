@@ -37,18 +37,26 @@ export const Navbar = () => {
         <ButtonIcon
           onClick={handleClick}
           id='projects'
+          withText
+          text='Projects'
         />
         <ButtonIcon
           onClick={handleClick}
           id='skills'
+          withText
+          text='Skills'
         />
         <ButtonIcon
           onClick={handleClick}
           id='aboutMe'
+          withText
+          text='About me'
         />
         <ButtonIcon
           onClick={handleClick}
           id='contact'
+          withText
+          text='Contact'
         />
       </div>
     </nav>
