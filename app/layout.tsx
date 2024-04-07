@@ -6,6 +6,7 @@ import ButtonScroll from './ui/buttons/buttonScroll'
 import styles from '@/app/ui/styles/buttons.module.scss'
 import ButtonText from './ui/buttons/buttonText'
 import HomeButton from './ui/homeButton'
+import { GetSectionProvider } from '@/contexts/getSection'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,13 +23,17 @@ export default function RootLayout({
       <body className={roboto.className}>
         <HomeButton />
 
-        <Navbar />
-        {children}
-        <div
-          className={styles.buttonScrollContainer}
-        >
-          <ButtonScroll />
-        </div>
+        <GetSectionProvider>
+          <Navbar />
+          {children}
+          <div
+            className={
+              styles.buttonScrollContainer
+            }
+          >
+            <ButtonScroll />
+          </div>
+        </GetSectionProvider>
       </body>
     </html>
   )
