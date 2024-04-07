@@ -42,12 +42,6 @@
 
   &:hover {
     box-shadow: $button-shadow-hover;
-    width: 170px;
-
-    .text {
-      animation-name: opacity;
-      animation-duration: 0.5s;
-    }
   }
 
   .text {
@@ -107,4 +101,18 @@
   top: 0;
   left: 0;
   margin-top: $size-30;
+}
+
+@include responsive(l) {
+  .buttonIcon {
+    &:hover {
+      box-shadow: $button-shadow-hover;
+      width: 170px;
+
+      .text {
+        animation-name: opacity;
+        animation-duration: 0.5s;
+      }
+    }
+  }
 }
