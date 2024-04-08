@@ -15,21 +15,81 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.skills}`}
         >
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
-          <SVGComponent />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
+          <SVGComponent
+            icon='default'
+            width='24'
+            height='24'
+          />
         </article>
       </section>
 

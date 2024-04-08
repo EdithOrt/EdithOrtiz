@@ -35,10 +35,12 @@ export const Navbar = () => {
         <ButtonIcon
           onClick={handleClick}
           id='home'
+          iconName='github'
         />
         <ButtonIcon
           onClick={handleClick}
           id='home'
+          iconName='linkedin'
         />
       </div>
 
@@ -48,24 +50,28 @@ export const Navbar = () => {
           id='projects'
           withText
           text='Projects'
+          iconName='projects'
         />
         <ButtonIcon
           onClick={handleClick}
           id='skills'
           withText
           text='Skills'
+          iconName='skills'
         />
         <ButtonIcon
           onClick={handleClick}
           id='aboutMe'
           withText
           text='About me'
+          iconName='aboutMe'
         />
         <ButtonIcon
           onClick={handleClick}
           id='contact'
           withText
           text='Contact'
+          iconName='contact'
         />
       </div>
     </nav>

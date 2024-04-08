@@ -54,7 +54,11 @@ const ButtonScroll = () => {
     >
       <p>SCROLL</p>
 
-      <SVGComponent />
+      <SVGComponent
+        icon='scroll'
+        width='16'
+        height='16'
+      />
     </button>
   )
 }
