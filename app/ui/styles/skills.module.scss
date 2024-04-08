@@ -31,8 +31,13 @@
 
 .skills {
   display: flex;
-  gap: $size-8 $size-12;
+  gap: $size-12 $size-12;
   flex-wrap: wrap;
+
+  svg {
+    width: $size-36;
+    height: $size-36;
+  }
 }
 
 @include responsive(m) {
@@ -44,5 +49,12 @@
 
   .softskills {
     width: 300px;
+  }
+
+  .skills {
+    svg {
+      width: $size-58;
+      height: $size-58;
+    }
   }
 }
