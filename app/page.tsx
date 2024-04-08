@@ -10,6 +10,7 @@ import Paragraph from './ui/paragraph'
 import Logo from './ui/logo'
 import ProjectsContainer from './ui/projectsContainer'
 import SkillsContainer from './ui/skillsContainer'
+
 import Title from './ui/title'
 
 import HomeContainer from './ui/homeContainer'
