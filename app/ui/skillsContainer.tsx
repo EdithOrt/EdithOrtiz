@@ -3,6 +3,37 @@ import Paragraph from './paragraph'
 import Title from './title'
 import { SVGComponent } from './svgComponent'
 
+const skillsList = [
+  { name: 'Javascript', id: 'javascript' },
+  { name: 'Typescript', id: 'typescript' },
+  { name: 'HTML5', id: 'html' },
+  { name: 'CSS3', id: 'css' },
+  { name: 'Sass', id: 'sass' },
+  { name: 'React js', id: 'react' },
+  { name: 'Next js', id: 'nextjs' },
+  { name: 'Tailwind', id: 'tailwind' },
+  { name: 'GraphQL', id: 'grapql' },
+  { name: 'Git', id: 'git' },
+  { name: 'Github', id: 'github' },
+  { name: 'GitLab', id: 'gitlab' },
+  { name: 'Boostrap', id: 'boostrap' },
+  { name: 'Firebase', id: 'firebase' },
+  { name: 'HTML5', id: 'materialui' },
+  { name: 'JQuery', id: 'jquery' },
+  { name: 'Mapbox', id: 'mapbox' },
+  { name: 'Vercel', id: 'vercel' },
+  { name: 'Docker', id: 'docker' },
+  { name: 'Highcharts', id: 'highcharts' },
+  { name: 'Notion', id: 'notion' },
+  { name: 'Coda', id: 'coda' },
+  { name: 'Miró', id: 'miro' },
+  { name: 'Asana', id: 'asana' },
+  { name: 'Trello', id: 'trello' },
+  { name: 'Miró', id: 'illustrator' },
+  { name: 'Asana', id: 'photoshop' },
+  { name: 'Trello', id: 'xd' }
+]
+
 const SkillsContainer = () => {
   return (
     <div
@@ -15,81 +46,14 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.skills}`}
         >
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
-          <SVGComponent
-            icon='default'
-            width='24'
-            height='24'
-          />
+          {skillsList.map(skill => (
+            <SVGComponent
+              icon={skill.id}
+              width='24'
+              height='24'
+              key={skill.id}
+            />
+          ))}
         </article>
       </section>
 
