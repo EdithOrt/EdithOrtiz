@@ -45,7 +45,7 @@ const ProjectsContainer = () => {
           />
 
           <div className={styles.button}>
-            <ButtonAction />
+            <ButtonAction text='Ver proyecto' />
           </div>
         </div>
 
