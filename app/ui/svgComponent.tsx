@@ -190,8 +190,8 @@ const getIcon = ({
               maskUnits='userSpaceOnUse'
               x='0'
               y='0'
-              width={width}
-              height={height}
+              width='30'
+              height='30'
             >
               <path
                 d='M0 0H30V30H0V0Z'
@@ -214,8 +214,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_297'>
               <rect
-                width={width}
-                height={height}
+                width='30'
+                height='30'
                 fill='white'
               />
             </clipPath>
@@ -297,8 +297,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_276'>
               <rect
-                width={width}
-                height={height}
+                width='30'
+                height='30'
                 fill='white'
               />
             </clipPath>
@@ -338,8 +338,8 @@ const getIcon = ({
               maskUnits='userSpaceOnUse'
               x='0'
               y='0'
-              width={width}
-              height={height}
+              width='30'
+              height='30'
             >
               <path
                 d='M0 0H30V30H0V0Z'
@@ -358,8 +358,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_282'>
               <rect
-                width={width}
-                height={height}
+                width='30'
+                height='30'
                 fill='white'
               />
             </clipPath>
