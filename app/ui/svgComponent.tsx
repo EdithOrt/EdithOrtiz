@@ -144,8 +144,8 @@ const getIcon = ({
     case 'javascript':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -161,8 +161,8 @@ const getIcon = ({
     case 'typescript':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -178,8 +178,8 @@ const getIcon = ({
     case 'html':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -190,8 +190,8 @@ const getIcon = ({
               maskUnits='userSpaceOnUse'
               x='0'
               y='0'
-              width='30'
-              height='30'
+              width={width}
+              height={height}
             >
               <path
                 d='M0 0H30V30H0V0Z'
@@ -214,8 +214,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_297'>
               <rect
-                width='30'
-                height='30'
+                width={width}
+                height={height}
                 fill='white'
               />
             </clipPath>
@@ -227,8 +227,8 @@ const getIcon = ({
     case 'css':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -249,8 +249,8 @@ const getIcon = ({
     case 'sass':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -266,8 +266,8 @@ const getIcon = ({
     case 'react':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -282,8 +282,8 @@ const getIcon = ({
     case 'nextjs':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -297,8 +297,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_276'>
               <rect
-                width='30'
-                height='30'
+                width={width}
+                height={height}
                 fill='white'
               />
             </clipPath>
@@ -309,8 +309,8 @@ const getIcon = ({
     case 'tailwind':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -326,8 +326,8 @@ const getIcon = ({
     case 'grapql':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -338,8 +338,8 @@ const getIcon = ({
               maskUnits='userSpaceOnUse'
               x='0'
               y='0'
-              width='30'
-              height='30'
+              width={width}
+              height={height}
             >
               <path
                 d='M0 0H30V30H0V0Z'
@@ -358,8 +358,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_282'>
               <rect
-                width='30'
-                height='30'
+                width={width}
+                height={height}
                 fill='white'
               />
             </clipPath>
@@ -370,8 +370,8 @@ const getIcon = ({
     case 'git':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -386,8 +386,8 @@ const getIcon = ({
     case 'github':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -402,8 +402,8 @@ const getIcon = ({
     case 'gitlab':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -418,8 +418,8 @@ const getIcon = ({
     case 'boostrap':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -434,8 +434,8 @@ const getIcon = ({
     case 'firebase':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -450,8 +450,8 @@ const getIcon = ({
     case 'materialui':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -470,8 +470,8 @@ const getIcon = ({
     case 'jquery':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -486,8 +486,8 @@ const getIcon = ({
     case 'mapbox':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -502,8 +502,8 @@ const getIcon = ({
     case 'vercel':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -518,8 +518,8 @@ const getIcon = ({
     case 'docker':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -534,8 +534,8 @@ const getIcon = ({
     case 'highcharts':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -550,8 +550,8 @@ const getIcon = ({
     case 'figma':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -568,8 +568,8 @@ const getIcon = ({
     case 'notion':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -585,8 +585,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_331'>
               <rect
-                width='30'
-                height='30'
+                width={width}
+                height={height}
                 fill='white'
               />
             </clipPath>
@@ -597,8 +597,8 @@ const getIcon = ({
     case 'coda':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -613,8 +613,8 @@ const getIcon = ({
     case 'miro':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -629,8 +629,8 @@ const getIcon = ({
     case 'asana':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -645,8 +645,8 @@ const getIcon = ({
     case 'trello':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -661,8 +661,8 @@ const getIcon = ({
     case 'illustrator':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -685,8 +685,8 @@ const getIcon = ({
     case 'photoshop':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -705,8 +705,8 @@ const getIcon = ({
     case 'xd':
       element = (
         <svg
-          width='30'
-          height='30'
+          width={width}
+          height={height}
           viewBox='0 0 30 30'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
