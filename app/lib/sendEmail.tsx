@@ -41,3 +41,5 @@ const sendEmail = async (formData: FormData) => {
 
   return data
 }
+
+export default sendEmail
