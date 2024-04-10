@@ -16,6 +16,7 @@ import Title from './ui/title'
 import HomeContainer from './ui/homeContainer'
 
 export default function Home() {
+  console.log(process.env)
   return (
     <main className={styles.body}>
       <div className={styles.center}>
