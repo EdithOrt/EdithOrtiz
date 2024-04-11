@@ -58,6 +58,12 @@
   resize: none;
 }
 
+.inputError {
+  font-weight: $text-ligth;
+  color: $red;
+  margin-top: $size-10;
+}
+
 .input:focus + .inputText {
   top: -35px;
   left: -$size-10;
