@@ -167,6 +167,12 @@ const ContactForm = () => {
           <div className={styles.button}>
             <ButtonAction text='ENVIAR' />
           </div>
+
+          <div
+            className={`${styles.formMessage} ${styles.success}`}
+          >
+            <p>Message sent!</p>
+          </div>
         </form>
       </div>
     </section>
