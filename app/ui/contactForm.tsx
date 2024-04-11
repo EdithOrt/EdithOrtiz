@@ -46,15 +46,58 @@ const ContactForm = () => {
             submitData()
           }}
         >
-          <input
-            type='text'
-            placeholder='Name'
-          />
-          <input
-            type='email'
-            placeholder='Email'
-          />
-          <textarea placeholder='Enter your message here' />
+          <div className={styles.containerInput}>
+            <div className={styles.inputBox}>
+              <input
+                type='text'
+                className={styles.input}
+                required
+              />
+
+              <span className={styles.inputText}>
+                Nombre
+              </span>
+
+              <span
+                className={styles.inputLine}
+              />
+            </div>
+          </div>
+
+          <div className={styles.containerInput}>
+            <div className={styles.inputBox}>
+              <input
+                type='email'
+                className={styles.input}
+                required
+              />
+
+              <span className={styles.inputText}>
+                Email
+              </span>
+
+              <span
+                className={styles.inputLine}
+              />
+            </div>
+          </div>
+
+          <div className={styles.containerInput}>
+            <div className={styles.inputBox}>
+              <textarea
+                className={styles.input}
+                required
+              />
+
+              <span className={styles.inputText}>
+                Enter your message here
+              </span>
+
+              <span
+                className={styles.inputLine}
+              />
+            </div>
+          </div>
 
           <div className={styles.button}>
             <ButtonAction text='ENVIAR' />
