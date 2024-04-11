@@ -10,7 +10,7 @@ import {
   useForm
 } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import React from 'react'
+import React, { useState } from 'react'
 
 const schema = z.object({
   name: z
@@ -37,8 +37,15 @@ const schema = z.object({
 const requiredSchema = schema.required()
 
 type SchemaType = z.infer<typeof schema>
+type MessageApiType = {
+  text: string
+  type: 'success' | 'error'
+}
 
 const ContactForm = () => {
+  const [messageAPI, setMessageAPI] =
+    useState<MessageApiType>()
+
   const {
     register,
     handleSubmit,
@@ -168,11 +175,13 @@ const ContactForm = () => {
             <ButtonAction text='ENVIAR' />
           </div>
 
-          <div
-            className={`${styles.formMessage} ${styles.success}`}
-          >
-            <p>Message sent!</p>
-          </div>
+          {messageAPI && (
+            <div
+              className={`${styles.formMessage} ${messageAPI.type}`}
+            >
+              <p>{messageAPI.text}</p>
+            </div>
+          )}
         </form>
       </div>
     </section>
