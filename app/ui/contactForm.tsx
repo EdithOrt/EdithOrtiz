@@ -42,9 +42,7 @@ const ContactForm = () => {
 
         <form
           className={styles.form}
-          action={() => {
-            submitData()
-          }}
+          onSubmit={() => submitData()}
         >
           <div className={styles.containerInput}>
             <div className={styles.inputBox}>
@@ -83,9 +81,11 @@ const ContactForm = () => {
           </div>
 
           <div className={styles.containerInput}>
-            <div className={styles.inputBox}>
+            <div
+              className={`${styles.inputBox} ${styles.textarea}`}
+            >
               <textarea
-                className={styles.input}
+                className={`${styles.input} `}
                 required
               />
 
