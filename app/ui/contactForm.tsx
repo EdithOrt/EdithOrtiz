@@ -46,18 +46,23 @@ const ContactForm = () => {
   const [messageAPI, setMessageAPI] =
     useState<MessageApiType>()
 
+  const [loading, setLoading] =
+    useState<boolean>(false)
+
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    setValue
   } = useForm<SchemaType>({
     resolver: zodResolver(schema)
   })
 
   const submitData: SubmitHandler<
     SchemaType
-  > = async data => {
-    console.log({ data })
+  > = async inputsData => {
+    setLoading(true)
+    console.log({ inputsData })
     console.log('entra aquí')
     const formData = new FormData()
 
@@ -70,19 +75,38 @@ const ContactForm = () => {
       'Hi!, this is a init text'
     )
 
-    // const { data, error } = await sendEmail(
-    //   formData
-    // )
+    const response = await sendEmail(formData)
 
-    // if (error) {
-    //   console.log({ error })
-    //   return
-    // }
+    if (response?.error) {
+      setMessageAPI({
+        text: 'error sending message',
+        type: 'error'
+      })
 
-    // console.log({ data })
+      setTimeout(() => {
+        setMessageAPI(undefined)
+      }, 2000)
+      setLoading(false)
+      return
+    }
+
+    setValue('name', '')
+    setValue('email', '')
+    setValue('message', '')
+
+    setMessageAPI({
+      text: 'Message sent!',
+      type: 'success'
+    })
+
+    setTimeout(() => {
+      setMessageAPI(undefined)
+      setLoading(false)
+    }, 2000)
+
+    console.log({ response })
   }
 
-  console.log({ errors })
   return (
     <section
       className={styles.main}
@@ -172,12 +196,17 @@ const ContactForm = () => {
           </div>
 
           <div className={styles.button}>
-            <ButtonAction text='ENVIAR' />
+            <ButtonAction
+              text='ENVIAR'
+              disable={loading}
+            />
           </div>
 
           {messageAPI && (
             <div
-              className={`${styles.formMessage} ${messageAPI.type}`}
+              className={`${styles.formMessage} ${
+                styles[messageAPI.type]
+              }`}
             >
               <p>{messageAPI.text}</p>
             </div>
