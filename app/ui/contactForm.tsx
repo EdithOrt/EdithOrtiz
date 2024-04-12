@@ -188,6 +188,7 @@ const ContactForm = () => {
             <ButtonAction
               text='ENVIAR'
               disable={loading}
+              type='submit'
             />
           </div>
 

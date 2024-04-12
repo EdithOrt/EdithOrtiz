@@ -48,6 +48,7 @@ const ProjectsContainer = () => {
             <ButtonAction
               text='Ver proyecto'
               disable={false}
+              type='button'
             />
           </div>
         </div>
