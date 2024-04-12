@@ -62,18 +62,11 @@ const ContactForm = () => {
     SchemaType
   > = async inputsData => {
     setLoading(true)
-    console.log({ inputsData })
-    console.log('entra aquí')
     const formData = new FormData()
 
-    formData.append(
-      'senderEmail',
-      'eoc.diseno@gmail.com'
-    )
-    formData.append(
-      'message',
-      'Hi!, this is a init text'
-    )
+    formData.append('email', inputsData.email)
+    formData.append('message', inputsData.message)
+    formData.append('email', inputsData.email)
 
     const response = await sendEmail(formData)
 
@@ -103,8 +96,6 @@ const ContactForm = () => {
       setMessageAPI(undefined)
       setLoading(false)
     }, 2000)
-
-    console.log({ response })
   }
 
   return (

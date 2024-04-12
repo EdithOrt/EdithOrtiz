@@ -24,7 +24,7 @@ const sendEmail = async (
 
   try {
     data = await resend.emails.send({
-      from: 'Portfolio Contact Form<eoc.diseno@gmail.com>',
+      from: 'Portfolio <onboarding@resend.dev>',
       to: 'eoc.diseno@gmail.com',
       subject: 'Have a message from Portfolio',
       reply_to: email as string,
@@ -38,7 +38,7 @@ const sendEmail = async (
     return { error: `${error}` }
   }
 
-  return { data }
+  return data as object
 }
 
 export default sendEmail
