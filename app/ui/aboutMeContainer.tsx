@@ -29,10 +29,7 @@ const AboutMeContainer = () => {
         </div>
 
         <article className={styles.paragraph}>
-          <Paragraph
-            text='Curabitur semper maximus egestas. Aliquam erat volutpat. Etiam sodales sem vel interdum tempor. Ut at vestibulum tellus. Praesent efficitur arcu sit amet semper tempus. Morbi vel vulputate risus, sagittis posuere quam. Suspendisse et elit sed mi ultricies tempus. Donec nulla tellus, cursus pellentesque neque vel, condimentum aliquet nunc.
-'
-          />
+          <Paragraph text='My professional goal is continuous complement my front end development experience with my graphic design degree to explore new technological possibilities to build highly functional and scalable interfaces for all users and that these interfaces solve problems strategically and brilliantly.' />
 
           <div className={styles.button}>
             <ButtonAction
