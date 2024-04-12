@@ -71,11 +71,12 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.softskills}`}
         >
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
+          <Paragraph text='Creativity' />
+          <Paragraph text='Agile methodologies' />
+          <Paragraph text='Responsibility' />
+          <Paragraph text='Remote work' />
+          <Paragraph text='Sefl-learning skills' />
+          <Paragraph text='Perseverance' />
         </article>
       </section>
 
