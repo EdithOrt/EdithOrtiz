@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '@/app/ui/styles/aboutMe.module.scss'
 import Title from './title'
 import Paragraph from './paragraph'
@@ -5,6 +7,18 @@ import Image from 'next/image'
 import ButtonAction from './buttons/buttonAction'
 
 const AboutMeContainer = () => {
+  const downloadFile = () => {
+    const pdfPath = '/EDITH-ORTIZ-CV-en.pdf'
+    console.log({ pdfPath })
+    // Create an anchor element
+    const a = document.createElement('a')
+    a.href = pdfPath
+    console.log(a)
+    a.download = 'document.pdf' // Set the filename
+
+    // Programmatically trigger a click event on the anchor element
+    a.click()
+  }
   return (
     <section
       className={styles.main}
@@ -36,6 +50,7 @@ const AboutMeContainer = () => {
               text='Descarga mi CV'
               disable={false}
               type='button'
+              onClick={downloadFile}
             />
           </div>
         </article>
@@ -46,6 +61,7 @@ const AboutMeContainer = () => {
           text='Descarga mi CV'
           disable={false}
           type='button'
+          onClick={downloadFile}
         />
       </div>
 
