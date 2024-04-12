@@ -66,7 +66,7 @@ const ContactForm = () => {
 
     formData.append('email', inputsData.email)
     formData.append('message', inputsData.message)
-    formData.append('email', inputsData.email)
+    formData.append('name', inputsData.name)
 
     const response = await sendEmail(formData)
 
