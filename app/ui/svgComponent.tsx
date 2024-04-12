@@ -585,8 +585,8 @@ const getIcon = ({
           <defs>
             <clipPath id='clip0_973_331'>
               <rect
-                width={width}
-                height={height}
+                width='30 '
+                height='30'
                 fill='white'
               />
             </clipPath>

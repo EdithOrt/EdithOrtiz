@@ -77,9 +77,9 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.language}`}
         >
-          <Paragraph text='Inglés nivel técnico' />
+          <Paragraph text='Technical English' />
 
-          <Paragraph text='Español nativo' />
+          <Paragraph text='Native Spanish' />
         </article>
       </section>
     </div>
