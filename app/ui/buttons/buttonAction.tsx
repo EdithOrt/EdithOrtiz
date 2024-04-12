@@ -1,12 +1,21 @@
 import styles from '@/app/ui/styles/buttons.module.scss'
 import { roboto } from '../fonts'
 
-const ButtonAction = () => {
+const ButtonAction = ({
+  text,
+  disable
+}: {
+  text: string
+  disable: boolean
+}) => {
   return (
     <button
-      className={`${roboto.className} ${styles.button}`}
+      className={`${roboto.className} ${
+        styles.button
+      } ${disable && styles.buttonDisable}`}
+      disabled={disable}
     >
-      <p>Action Button</p>
+      <p>{text}</p>
     </button>
   )
 }

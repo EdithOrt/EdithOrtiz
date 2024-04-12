@@ -17,11 +17,12 @@ export const Navbar = () => {
     const targetElement =
       document.getElementById(id)
 
-    // Scroll to the target element
-    targetElement?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
+    if (targetElement)
+      // Scroll to the target element
+      targetElement?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
 
     updateSection(id)
   }

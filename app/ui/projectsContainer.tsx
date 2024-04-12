@@ -1,9 +1,14 @@
+'use client'
+import 'swiper/css'
+import 'swiper/css/navigation'
 import styles from '@/app/ui/styles/projects.module.scss'
 import Title from './title'
 import Paragraph from './paragraph'
 import Image from 'next/image'
 import metaregistry1 from '@/public/projects/metaregistry.png'
 import ButtonAction from './buttons/buttonAction'
+import { SwiperSlide, Swiper } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
 
 const ProjectsContainer = () => {
   return (
@@ -40,17 +45,46 @@ const ProjectsContainer = () => {
           />
 
           <div className={styles.button}>
-            <ButtonAction />
+            <ButtonAction
+              text='Ver proyecto'
+              disable={false}
+            />
           </div>
         </div>
 
         <div className={styles.carouselContainer}>
-          <Image
-            src={metaregistry1}
-            alt='Project image'
-            width={350}
-            height={176}
-          />
+          <Swiper
+            navigation
+            modules={[Navigation]}
+            className='projectsSwiper'
+          >
+            <SwiperSlide>
+              <Image
+                src={metaregistry1}
+                alt='Project image'
+                width={350}
+                height={176}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Image
+                src={metaregistry1}
+                alt='Project image'
+                width={350}
+                height={176}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Image
+                src={metaregistry1}
+                alt='Project image'
+                width={350}
+                height={176}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </article>
 

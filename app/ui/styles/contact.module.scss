@@ -8,7 +8,7 @@
 
 .title {
   width: 168px;
-  margin-top: $size-120;
+  margin-top: $size-80;
   display: inline-block;
 }
 
@@ -16,15 +16,119 @@
   margin-top: $size-40;
   display: flex;
   flex-direction: column;
-  gap: $size-24;
-}
-
-.input {
+  gap: $size-8;
 }
 
 .button {
   display: flex;
   justify-content: center;
+}
+
+.containerInput {
+  position: relative;
+  width: 100%;
+  padding-inline: $size-10;
+  margin: $size-30 0 $size-10;
+  transition: 5s;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  height: $size-40;
+  color: $white;
+
+  &.textarea {
+    height: 100px;
+  }
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: $size-16;
+  padding-inline: $size-10;
+  z-index: 1;
+  color: transparent;
+  resize: none;
+}
+
+.inputError {
+  font-weight: $text-ligth;
+  color: $red;
+  margin-top: $size-10;
+}
+
+.formMessage {
+  margin-inline: auto;
+  margin-top: $size-12;
+  &.success {
+    color: $green;
+  }
+
+  &.error {
+    color: $red;
+  }
+}
+
+.input:focus + .inputText {
+  top: -35px;
+  left: -$size-10;
+}
+
+.input:valid + .inputText {
+  top: -35px;
+  left: -$size-10;
+}
+
+.input:focus ~ .inputLine {
+  height: 100%;
+}
+
+.input:valid ~ .inputLine {
+  height: 100%;
+}
+
+.input:valid {
+  color: $black;
+}
+
+.input:focus {
+  color: $black;
+}
+
+.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.inputText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: $size-40;
+  font-size: $size-16;
+  padding-inline: $size-10;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputLine {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: $white;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 @include responsive(m) {
@@ -36,9 +140,20 @@
 
   .title {
     width: 241px;
+    margin-top: $size-120;
   }
 
   .container {
     width: 50%;
+  }
+
+  .form {
+    gap: $size-24;
+  }
+
+  .inputBox {
+    .textarea {
+      height: 150px;
+    }
   }
 }
