@@ -34,8 +34,6 @@ const schema = z.object({
     })
 })
 
-const requiredSchema = schema.required()
-
 type SchemaType = z.infer<typeof schema>
 type MessageApiType = {
   text: string
@@ -66,7 +64,7 @@ const ContactForm = () => {
 
     formData.append('email', inputsData.email)
     formData.append('message', inputsData.message)
-    formData.append('email', inputsData.email)
+    formData.append('name', inputsData.name)
 
     const response = await sendEmail(formData)
 
