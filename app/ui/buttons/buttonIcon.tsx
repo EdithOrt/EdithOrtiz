@@ -16,7 +16,9 @@ const ButtonIcon = ({
 }) => {
   return (
     <button
-      className={`${styles.buttonIcon} ${styles.rightButton}`}
+      className={`${styles.buttonIcon} ${
+        styles.rightButton
+      } ${!withText && styles.onlyIcon}`}
       onClick={() => onClick(id)}
     >
       <div className={styles.icon}>
