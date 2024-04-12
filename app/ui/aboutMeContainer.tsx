@@ -35,13 +35,19 @@ const AboutMeContainer = () => {
           />
 
           <div className={styles.button}>
-            <ButtonAction text='Descarga mi CV' />
+            <ButtonAction
+              text='Descarga mi CV'
+              disable={false}
+            />
           </div>
         </article>
       </section>
 
       <div className={styles.button}>
-        <ButtonAction text='Descarga mi CV' />
+        <ButtonAction
+          text='Descarga mi CV'
+          disable={false}
+        />
       </div>
 
       <div className={styles.photo}>

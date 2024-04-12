@@ -45,7 +45,10 @@ const ProjectsContainer = () => {
           />
 
           <div className={styles.button}>
-            <ButtonAction text='Ver proyecto' />
+            <ButtonAction
+              text='Ver proyecto'
+              disable={false}
+            />
           </div>
         </div>
 
