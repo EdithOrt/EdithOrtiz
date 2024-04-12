@@ -29,9 +29,9 @@ const skillsList = [
   { name: 'Miró', id: 'miro' },
   { name: 'Asana', id: 'asana' },
   { name: 'Trello', id: 'trello' },
-  { name: 'Miró', id: 'illustrator' },
-  { name: 'Asana', id: 'photoshop' },
-  { name: 'Trello', id: 'xd' }
+  { name: 'Illustrator', id: 'illustrator' },
+  { name: 'Photoshop', id: 'photoshop' },
+  { name: 'Adobe XD', id: 'xd' }
 ]
 
 const SkillsContainer = () => {
@@ -47,12 +47,20 @@ const SkillsContainer = () => {
           className={`${styles.content} ${styles.skills}`}
         >
           {skillsList.map(skill => (
-            <SVGComponent
-              icon={skill.id}
-              width='24'
-              height='24'
+            <div
               key={skill.id}
-            />
+              className={styles.skillContainer}
+            >
+              <SVGComponent
+                icon={skill.id}
+                width='24'
+                height='24'
+              />
+
+              <p className={styles.skillName}>
+                {skill.name}
+              </p>
+            </div>
           ))}
         </article>
       </section>
