@@ -34,8 +34,6 @@ const schema = z.object({
     })
 })
 
-const requiredSchema = schema.required()
-
 type SchemaType = z.infer<typeof schema>
 type MessageApiType = {
   text: string
