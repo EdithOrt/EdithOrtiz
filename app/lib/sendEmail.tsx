@@ -16,37 +16,29 @@ type SendEmailType = {
 const sendEmail = async (
   formData: FormData
 ): Promise<SendEmailType> => {
-  const senderEmail = formData.get('senderEmail')
+  const email = formData.get('email')
+  const name = formData.get('name')
   const message = formData.get('message')
-
-  // here vaidate form
-  if (typeof senderEmail !== 'string') {
-    return {
-      error: 'invalid... '
-    }
-  }
-
-  if (typeof message !== 'string') {
-    return { error: "'invalid...'" }
-  }
 
   let data
 
   try {
     data = await resend.emails.send({
-      from: 'Portfolio Contact Form<onboarding@resend.dev>',
+      from: 'Portfolio Contact Form<eoc.diseno@gmail.com>',
       to: 'eoc.diseno@gmail.com',
       subject: 'Have a message from Portfolio',
-      reply_to: senderEmail as string,
+      reply_to: email as string,
       react: React.createElement(EmailTemplate, {
-        firstName: 'John'
+        name: name as string,
+        message: message as string,
+        email: email as string
       })
     })
   } catch (error) {
     return { error: `${error}` }
   }
 
-  return { data: data }
+  return { data }
 }
 
 export default sendEmail
