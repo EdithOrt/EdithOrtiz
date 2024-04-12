@@ -35,6 +35,7 @@ const AboutMeContainer = () => {
             <ButtonAction
               text='Descarga mi CV'
               disable={false}
+              type='button'
             />
           </div>
         </article>
@@ -44,6 +45,7 @@ const AboutMeContainer = () => {
         <ButtonAction
           text='Descarga mi CV'
           disable={false}
+          type='button'
         />
       </div>
 
