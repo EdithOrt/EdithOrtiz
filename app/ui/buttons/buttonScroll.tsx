@@ -6,32 +6,65 @@ import { GetSectionContext } from '@/contexts/getSection'
 import { useContext } from 'react'
 
 const ButtonScroll = () => {
-  const { section, updateSection } = useContext(
-    GetSectionContext
-  )
+  const {
+    section,
+    updateSection,
+    flow,
+    direction
+  } = useContext(GetSectionContext)
 
-  const onClick = (section: string) => {
-    let id = 'home'
-    switch (section) {
-      case 'home':
-        id = 'projects'
+  const goUp = (value: string): string => {
+    let section = ''
+    switch (value) {
+      case 'contact':
+        section = 'aboutMe'
         break
-      case 'projects':
-        id = 'skills'
+      case 'aboutMe':
+        section = 'skills'
         break
       case 'skills':
-        id = 'aboutMe'
+        section = 'projects'
         break
-
-      case 'aboutMe':
-        id = 'contact'
-        break
-      case 'contact':
-        id = 'home'
+      case 'projects':
+        section = 'home'
         break
       default:
-        id = 'home'
+        section = 'home'
         break
+    }
+
+    return section
+  }
+
+  const goBottom = (value: string): string => {
+    let section = ''
+    switch (value) {
+      case 'home':
+        section = 'projects'
+        break
+      case 'projects':
+        section = 'skills'
+        break
+      case 'skills':
+        section = 'aboutMe'
+        break
+      case 'aboutMe':
+        section = 'contact'
+        break
+      default:
+        section = 'home'
+        break
+    }
+
+    return section
+  }
+
+  const handleScroll = (value: string) => {
+    let id = 'home'
+    if (value === 'start') {
+      id = goBottom(section)
+    } else if (value === 'end') {
+      id = goUp(section)
     }
 
     updateSection(id)
@@ -46,20 +79,31 @@ const ButtonScroll = () => {
         block: 'start'
       })
   }
+
   return (
     <button
       className={styles.buttonScroll}
       onClick={() => {
-        onClick(section)
+        handleScroll(flow.current)
       }}
     >
       <p>SCROLL</p>
 
-      <SVGComponent
-        icon='scroll'
-        width='16'
-        height='16'
-      />
+      <div
+        className={`${
+          direction === 'buttom' &&
+          styles.iconScrollEnd
+        } ${
+          direction === 'up' &&
+          styles.iconScrollStart
+        }`}
+      >
+        <SVGComponent
+          icon='scroll'
+          width='16'
+          height='16'
+        />
+      </div>
     </button>
   )
 }

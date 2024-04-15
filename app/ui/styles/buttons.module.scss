@@ -101,6 +101,14 @@
   right: $size-10;
 }
 
+.iconScrollEnd {
+  rotate: 180deg;
+}
+
+.iconScrollStart {
+  rotate: none;
+}
+
 .buttonHome {
   position: fixed;
   top: 0;
@@ -118,6 +126,12 @@
         animation-name: opacity;
         animation-duration: 0.5s;
       }
+    }
+  }
+
+  .onlyIcon {
+    &:hover {
+      width: $size-58;
     }
   }
 }

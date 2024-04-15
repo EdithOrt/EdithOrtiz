@@ -9,7 +9,7 @@ import ButtonAction from './buttons/buttonAction'
 const AboutMeContainer = () => {
   const downloadFile = () => {
     const pdfPath = '/EDITH-ORTIZ-CV-en.pdf'
-    console.log({ pdfPath })
+
     // Create an anchor element
     const a = document.createElement('a')
     a.href = pdfPath
