@@ -9,8 +9,8 @@ const ButtonScroll = () => {
   const {
     section,
     updateSection,
-    updateFlow,
-    flow
+    flow,
+    direction
   } = useContext(GetSectionContext)
 
   const goUp = (value: string): string => {
@@ -59,8 +59,7 @@ const ButtonScroll = () => {
     return section
   }
 
-  // usar useRef acá
-  const onClick = (value: string) => {
+  const handleScroll = (value: string) => {
     let id = 'home'
     if (value === 'start') {
       id = goBottom(section)
@@ -85,16 +84,26 @@ const ButtonScroll = () => {
     <button
       className={styles.buttonScroll}
       onClick={() => {
-        onClick(flow.current)
+        handleScroll(flow.current)
       }}
     >
       <p>SCROLL</p>
 
-      <SVGComponent
-        icon='scroll'
-        width='16'
-        height='16'
-      />
+      <div
+        className={`${
+          direction === 'buttom' &&
+          styles.iconScrollEnd
+        } ${
+          direction === 'up' &&
+          styles.iconScrollStart
+        }`}
+      >
+        <SVGComponent
+          icon='scroll'
+          width='16'
+          height='16'
+        />
+      </div>
     </button>
   )
 }

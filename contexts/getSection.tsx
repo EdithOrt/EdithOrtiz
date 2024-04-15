@@ -11,7 +11,8 @@ const GetSectionContext = createContext({
   section: 'home',
   updateSection: (id: string) => {},
   updateFlow: (newFlow: string) => {},
-  flow: { current: 'start' }
+  flow: { current: 'start' },
+  direction: 'up'
 })
 
 const GetSectionProvider: React.FC<{
@@ -19,6 +20,8 @@ const GetSectionProvider: React.FC<{
 }> = ({ children }) => {
   const [section, setSection] =
     useState<string>('home')
+  const [direction, setDirection] =
+    useState<string>('up')
 
   const flow = useRef<string>('start')
 
@@ -33,8 +36,10 @@ const GetSectionProvider: React.FC<{
   useEffect(() => {
     if (section === 'home') {
       updateFlow('start')
+      setDirection('up')
     } else if (section === 'contact') {
       updateFlow('end')
+      setDirection('buttom')
     }
   }, [section])
 
@@ -42,7 +47,8 @@ const GetSectionProvider: React.FC<{
     section,
     updateSection,
     updateFlow,
-    flow
+    flow,
+    direction
   }
   return (
     <GetSectionContext.Provider value={data}>
