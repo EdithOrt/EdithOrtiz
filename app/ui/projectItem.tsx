@@ -63,7 +63,7 @@ const ProjectItem = ({
             {images?.map(image => (
               <SwiperSlide key={image.id}>
                 <Image
-                  src={images.url}
+                  src={image.url}
                   alt={image.id}
                   width={350}
                   height={176}
@@ -81,7 +81,9 @@ const ProjectItem = ({
 
         <div>
           {technologies?.map(technology => (
-            <p>{technology.name}</p>
+            <p key={technology.name}>
+              {technology.name}
+            </p>
           ))}
         </div>
       </article>

@@ -76,6 +76,7 @@ const ProjectsContainer = () => {
     >
       {projectsList?.map(project => (
         <ProjectItem
+          key={project.id}
           title={project.title}
           description={project.description}
           images={project.images}
