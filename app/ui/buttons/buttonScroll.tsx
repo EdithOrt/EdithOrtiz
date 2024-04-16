@@ -3,7 +3,7 @@
 import { SVGComponent } from '../svgComponent'
 import styles from '@/app/ui/styles/buttons.module.scss'
 import { GetSectionContext } from '@/contexts/getSection'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 const ButtonScroll = () => {
   const { updateSection, flow, direction } =
@@ -29,6 +29,42 @@ const ButtonScroll = () => {
         block: 'start'
       })
   }
+
+  useEffect(() => {
+    const home = document.getElementById('home')
+    const contact =
+      document.getElementById('contact')
+
+    const handleEvent = () => {
+      const homePositionY =
+        home?.getBoundingClientRect().y as number
+
+      const contactPositionY =
+        contact?.getBoundingClientRect()
+          .y as number
+
+      if (homePositionY >= -240) {
+        updateSection('home')
+      } else if (contactPositionY <= 240) {
+        updateSection('contact')
+      }
+    }
+
+    const timeOut = setTimeout(() => {
+      window.addEventListener(
+        'scroll',
+        handleEvent
+      )
+    }, 500)
+
+    return () => {
+      clearTimeout(timeOut)
+      window.removeEventListener(
+        'scroll',
+        handleEvent
+      )
+    }
+  }, [])
 
   return (
     <button
