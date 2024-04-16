@@ -109,13 +109,6 @@
   rotate: none;
 }
 
-.buttonHome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: $size-30;
-}
-
 @include responsive(l) {
   .buttonIcon {
     &:hover {

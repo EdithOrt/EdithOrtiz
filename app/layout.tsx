@@ -4,8 +4,7 @@ import { roboto } from './ui/fonts'
 import { Navbar } from './ui/navbar'
 import ButtonScroll from './ui/buttons/buttonScroll'
 import styles from '@/app/ui/styles/buttons.module.scss'
-import ButtonText from './ui/buttons/buttonText'
-import HomeButton from './ui/homeButton'
+
 import { GetSectionProvider } from '@/contexts/getSection'
 
 export const metadata: Metadata = {
@@ -21,8 +20,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={roboto.className}>
-        <HomeButton />
-
         <GetSectionProvider>
           <Navbar />
           {children}
