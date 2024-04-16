@@ -6,65 +6,15 @@ import { GetSectionContext } from '@/contexts/getSection'
 import { useContext } from 'react'
 
 const ButtonScroll = () => {
-  const {
-    section,
-    updateSection,
-    flow,
-    direction
-  } = useContext(GetSectionContext)
-
-  const goUp = (value: string): string => {
-    let section = ''
-    switch (value) {
-      case 'contact':
-        section = 'aboutMe'
-        break
-      case 'aboutMe':
-        section = 'skills'
-        break
-      case 'skills':
-        section = 'projects'
-        break
-      case 'projects':
-        section = 'home'
-        break
-      default:
-        section = 'home'
-        break
-    }
-
-    return section
-  }
-
-  const goBottom = (value: string): string => {
-    let section = ''
-    switch (value) {
-      case 'home':
-        section = 'projects'
-        break
-      case 'projects':
-        section = 'skills'
-        break
-      case 'skills':
-        section = 'aboutMe'
-        break
-      case 'aboutMe':
-        section = 'contact'
-        break
-      default:
-        section = 'home'
-        break
-    }
-
-    return section
-  }
+  const { updateSection, flow, direction } =
+    useContext(GetSectionContext)
 
   const handleScroll = (value: string) => {
     let id = 'home'
     if (value === 'start') {
-      id = goBottom(section)
+      id = 'contact'
     } else if (value === 'end') {
-      id = goUp(section)
+      id = 'home'
     }
 
     updateSection(id)
