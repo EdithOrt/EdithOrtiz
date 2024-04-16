@@ -8,44 +8,50 @@ import Image from 'next/image'
 import metaregistry1 from '@/public/projects/metaregistry.png'
 import ButtonAction from './buttons/buttonAction'
 
-const ProjectItem = () => {
+type ImagesType = { url: string; id: string }
+type TechnologiesType = {
+  name: string
+  id: string
+}
+
+const ProjectItem = ({
+  title,
+  description,
+  images,
+  url,
+  technologies
+}: {
+  title: string
+  description: string
+  images: Array<ImagesType>
+  url?: string
+  technologies: Array<TechnologiesType>
+}) => {
   return (
     <>
       <article
         className={styles.projectContainer}
       >
         <div className={styles.titleContainer}>
-          <Title text='Project Title' />
+          <Title text={title} />
         </div>
 
         <div className={styles.textContainer}>
           <div className={styles.title}>
-            <Title text='Project Title' />
+            <Title text={title} />
           </div>
 
-          <Paragraph
-            text='Donec sodales, sapien auctor fermentum
-      ullamcorper, risus lorem feugiat ligula, sed
-      volutpat lacus risus vel dolor. Praesent vel
-      justo nec neque dapibus imperdiet quis sit
-      amet odio. Mauris eu metus eu ipsum
-      facilisis finibus. Donec venenatis, mi a
-      auctor imperdiet, nulla est pretium orci, at
-      accumsan leo ex lobortis felis. Nulla id mi
-      feugiat, scelerisque ligula ut, bibendum
-      massa. Nam sagittis urna eget nunc
-      vulputate, vel fermentum tortor imperdiet.
-      Donec sed laoreet ligula, finibus luctus
-      lectus.'
-          />
+          <Paragraph text={description} />
 
-          <div className={styles.button}>
-            <ButtonAction
-              text='Ver proyecto'
-              disable={false}
-              type='button'
-            />
-          </div>
+          {url && (
+            <div className={styles.button}>
+              <ButtonAction
+                text='Ver proyecto'
+                disable={false}
+                type='button'
+              />
+            </div>
+          )}
         </div>
 
         <div className={styles.carouselContainer}>
@@ -54,32 +60,16 @@ const ProjectItem = () => {
             modules={[Navigation]}
             className='projectsSwiper'
           >
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
+            {images?.map(image => (
+              <SwiperSlide key={image.id}>
+                <Image
+                  src={images.url}
+                  alt={image.id}
+                  width={350}
+                  height={176}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </article>
@@ -90,9 +80,9 @@ const ProjectItem = () => {
         </p>
 
         <div>
-          <p>icon</p>
-          <p>icon</p>
-          <p>icon</p>
+          {technologies?.map(technology => (
+            <p>{technology.name}</p>
+          ))}
         </div>
       </article>
     </>

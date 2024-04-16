@@ -15,6 +15,12 @@ const ProjectsContainer = () => {
       id: 'ops-dasboard',
       images: [
         { url: metaregistry1, id: 'meta1' }
+      ],
+      technologies: [
+        {
+          name: 'graphql',
+          id: 'graphql'
+        }
       ]
     },
     {
@@ -24,6 +30,12 @@ const ProjectsContainer = () => {
       id: 'cme',
       images: [
         { url: metaregistry1, id: 'meta1' }
+      ],
+      technologies: [
+        {
+          name: 'graphql',
+          id: 'graphql'
+        }
       ]
     },
     {
@@ -33,6 +45,12 @@ const ProjectsContainer = () => {
       id: 'metaregisty',
       images: [
         { url: metaregistry1, id: 'meta1' }
+      ],
+      technologies: [
+        {
+          name: 'graphql',
+          id: 'graphql'
+        }
       ]
     },
     {
@@ -42,6 +60,12 @@ const ProjectsContainer = () => {
       id: 'y-cipboard',
       images: [
         { url: metaregistry1, id: 'meta1' }
+      ],
+      technologies: [
+        {
+          name: 'graphql',
+          id: 'graphql'
+        }
       ]
     }
   ]
@@ -51,7 +75,12 @@ const ProjectsContainer = () => {
       id='projects'
     >
       {projectsList?.map(project => (
-        <ProjectItem />
+        <ProjectItem
+          title={project.title}
+          description={project.description}
+          images={project.images}
+          technologies={project.technologies}
+        />
       ))}
     </section>
   )
