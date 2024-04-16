@@ -73,7 +73,11 @@ const ButtonScroll = () => {
         handleScroll(flow.current)
       }}
     >
-      <p>SCROLL</p>
+      <p>{`${
+        direction === 'buttom'
+          ? 'Home'
+          : 'Contact'
+      }`}</p>
 
       <div
         className={`${
