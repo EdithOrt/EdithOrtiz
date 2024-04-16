@@ -7,6 +7,7 @@ import Paragraph from './paragraph'
 import Image from 'next/image'
 import metaregistry1 from '@/public/projects/metaregistry.png'
 import ButtonAction from './buttons/buttonAction'
+import { SVGComponent } from './svgComponent'
 
 type ImagesType = { url: string; id: string }
 type TechnologiesType = {
@@ -81,9 +82,12 @@ const ProjectItem = ({
 
         <div>
           {technologies?.map(technology => (
-            <p key={technology.name}>
-              {technology.name}
-            </p>
+            <SVGComponent
+              icon={technology.name}
+              key={technology.id}
+              width='30'
+              height='30'
+            />
           ))}
         </div>
       </article>

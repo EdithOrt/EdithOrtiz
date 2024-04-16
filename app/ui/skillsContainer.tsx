@@ -12,7 +12,7 @@ const skillsList = [
   { name: 'React js', id: 'react' },
   { name: 'Next js', id: 'nextjs' },
   { name: 'Tailwind', id: 'tailwind' },
-  { name: 'GraphQL', id: 'grapql' },
+  { name: 'GraphQL', id: 'graphql' },
   { name: 'Git', id: 'git' },
   { name: 'Github', id: 'github' },
   { name: 'GitLab', id: 'gitlab' },

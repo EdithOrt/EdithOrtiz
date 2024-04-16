@@ -323,7 +323,7 @@ const getIcon = ({
       )
       break
 
-    case 'grapql':
+    case 'graphql':
       element = (
         <svg
           width={width}
