@@ -8,6 +8,7 @@ import Image from 'next/image'
 import metaregistry1 from '@/public/projects/metaregistry.png'
 import ButtonAction from './buttons/buttonAction'
 import { SVGComponent } from './svgComponent'
+import getProjectsImages from '../lib/getProjectsImages'
 
 type ImagesType = { url: string; id: string }
 type TechnologiesType = {
@@ -18,15 +19,15 @@ type TechnologiesType = {
 const ProjectItem = ({
   title,
   description,
-  images,
   url,
-  technologies
+  technologies,
+  id
 }: {
   title: string
   description: string
-  images: Array<ImagesType>
   url?: string
   technologies: Array<TechnologiesType>
+  id: string
 }) => {
   return (
     <>
@@ -61,11 +62,11 @@ const ProjectItem = ({
             modules={[Navigation]}
             className='projectsSwiper'
           >
-            {images?.map(image => (
+            {getProjectsImages(id)?.map(image => (
               <SwiperSlide key={image.id}>
                 <Image
                   src={image.url}
-                  alt={image.id}
+                  alt={image.title}
                   width={350}
                   height={176}
                 />
@@ -80,14 +81,26 @@ const ProjectItem = ({
           Technologies
         </p>
 
-        <div>
+        <div
+          className={styles.technologiesContainer}
+        >
           {technologies?.map(technology => (
-            <SVGComponent
-              icon={technology.name}
-              key={technology.id}
-              width='30'
-              height='30'
-            />
+            <div
+              className={styles.technologyItem}
+            >
+              <SVGComponent
+                icon={technology.id}
+                key={technology.id}
+                width='40'
+                height='40'
+              />
+
+              <p
+                className={styles.technologyText}
+              >
+                {technology.name}
+              </p>
+            </div>
           ))}
         </div>
       </article>
