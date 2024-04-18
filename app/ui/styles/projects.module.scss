@@ -2,8 +2,7 @@
 @import './mixins.module.scss';
 
 .main {
-  //  height: $fill-window;
-  background-color: #4a7454;
+  padding-bottom: $size-24;
 }
 
 .projectContainer {
@@ -34,9 +33,19 @@
 .carouselContainer {
   order: 1;
   width: 100%;
+  height: 176px;
+
+  .swiper-slide {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .img {
-    // width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -49,12 +58,14 @@
     display: flex;
     flex-direction: column;
     padding: $container-l-padding;
+    padding-bottom: $size-38;
   }
 
   .projectContainer {
     flex-direction: row;
     margin-top: $size-70;
     justify-content: space-between;
+    height: 70vh;
   }
 
   .titleContainer {
@@ -81,7 +92,6 @@
   .carouselContainer {
     order: 2;
     width: 60%;
-    height: 367px;
 
     img {
       width: 100%;

@@ -1,6 +1,7 @@
 'use client'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import styles from '@/app/ui/styles/projects.module.scss'
 import ProjectItem from './projectItem'
 

@@ -1,11 +1,14 @@
 import { SwiperSlide, Swiper } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import {
+  Autoplay,
+  Navigation,
+  Pagination
+} from 'swiper/modules'
 import styles from '@/app/ui/styles/projects.module.scss'
 
 import Title from './title'
 import Paragraph from './paragraph'
 import Image from 'next/image'
-import metaregistry1 from '@/public/projects/metaregistry.png'
 import ButtonAction from './buttons/buttonAction'
 import { SVGComponent } from './svgComponent'
 import getProjectsImages from '../lib/getProjectsImages'
@@ -58,8 +61,16 @@ const ProjectItem = ({
 
         <div className={styles.carouselContainer}>
           <Swiper
+            pagination={{
+              type: 'progressbar'
+            }}
             navigation
-            modules={[Navigation]}
+            modules={[
+              Navigation,
+              Pagination,
+              Autoplay
+            ]}
+            autoplay={{ delay: 5000 }}
             className='projectsSwiper'
           >
             {getProjectsImages(id)?.map(image => (
@@ -67,8 +78,6 @@ const ProjectItem = ({
                 <Image
                   src={image.url}
                   alt={image.title}
-                  width={350}
-                  height={176}
                 />
               </SwiperSlide>
             ))}
@@ -87,6 +96,7 @@ const ProjectItem = ({
           {technologies?.map(technology => (
             <div
               className={styles.technologyItem}
+              key={technology.id}
             >
               <SVGComponent
                 icon={technology.id}
