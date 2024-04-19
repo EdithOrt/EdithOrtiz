@@ -19,6 +19,8 @@ type TechnologiesType = {
   id: string
 }
 
+// autoplay={{ delay: 5000 }}
+
 const ProjectItem = ({
   title,
   description,
@@ -75,10 +77,28 @@ const ProjectItem = ({
           >
             {getProjectsImages(id)?.map(image => (
               <SwiperSlide key={image.id}>
-                <Image
-                  src={image.url}
-                  alt={image.title}
-                />
+                <div
+                  className={
+                    styles.carouselContent
+                  }
+                >
+                  <div
+                    className={
+                      styles.imageContainer
+                    }
+                  >
+                    <Image
+                      src={image.url}
+                      alt={image.title}
+                    />
+                  </div>
+
+                  <p
+                    className={styles.imageTitle}
+                  >
+                    {image.title}
+                  </p>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
