@@ -11,7 +11,7 @@
 }
 
 .projectItem {
-  min-height: 80vh;
+  min-height: 90vh;
   &:first-of-type {
     min-height: 100vh;
     .projectContainer {
@@ -57,6 +57,7 @@
   padding: $container-padding;
   margin-top: $size-24;
   letter-spacing: $letter-spacing;
+  line-height: 110%;
 
   .title {
     display: none;
@@ -110,6 +111,8 @@
     width: 30%;
     padding: 0;
     margin-top: 0;
+    line-height: 130%;
+
     .title {
       display: block;
       margin-bottom: $size-30;
