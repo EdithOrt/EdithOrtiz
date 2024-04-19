@@ -8,13 +8,27 @@
 .projectContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+}
+
+.projectItem {
+  min-height: 80vh;
+  &:first-of-type {
+    min-height: 100vh;
+    .projectContainer {
+      .titleContainer {
+        margin-top: $size-50;
+      }
+    }
+  }
+
+  &:last-of-type {
+    min-height: 70%;
+  }
 }
 
 .titleContainer {
   padding: $container-padding;
   margin-bottom: $size-40;
-  margin-top: $size-80;
 }
 
 .textContainer {
@@ -59,7 +73,10 @@
     flex-direction: row;
     margin-top: $size-70;
     justify-content: space-between;
-    height: 70vh;
+    height: 60vh;
+    &:first-of-type {
+      min-height: 0;
+    }
   }
 
   .titleContainer {
@@ -86,6 +103,7 @@
   .carouselContainer {
     order: 2;
     width: 60%;
+    height: 100%;
 
     img {
       width: 100%;
@@ -96,8 +114,9 @@
 
   .technologies {
     display: block;
-    margin-top: $size-80;
+    margin-top: 0;
     font-size: $size-20;
+    margin-top: $size-50;
   }
 
   .technologiesText {
@@ -122,5 +141,9 @@
   .technologyText {
     font-size: $size-12;
     margin-top: $size-4;
+  }
+
+  .projectItem {
+    min-height: 100vh;
   }
 }

@@ -33,7 +33,7 @@ const ProjectItem = ({
   id: string
 }) => {
   return (
-    <>
+    <div className={styles.projectItem}>
       <article
         className={styles.projectContainer}
       >
@@ -114,7 +114,7 @@ const ProjectItem = ({
           ))}
         </div>
       </article>
-    </>
+    </div>
   )
 }
 
