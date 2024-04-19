@@ -54,10 +54,6 @@ a {
   .swiper-button-next {
     display: none;
   }
-
-  .swiper-slide {
-    background-color: $black;
-  }
 }
 
 @include responsive(m) {
