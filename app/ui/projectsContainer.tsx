@@ -5,8 +5,6 @@ import 'swiper/css/pagination'
 import styles from '@/app/ui/styles/projects.module.scss'
 import ProjectItem from './projectItem'
 
-import metaregistry1 from '@/public/projects/metaregistry.png'
-
 const ProjectsContainer = () => {
   const projectsList = [
     {
@@ -16,12 +14,56 @@ const ProjectsContainer = () => {
       id: 'ops-dasboard',
       technologies: [
         {
-          name: 'GraphQL',
-          id: 'graphql'
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
         },
         {
           name: 'Next js',
           id: 'nextjs'
+        },
+        {
+          name: 'GraphQL',
+          id: 'graphql'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'Boostrap',
+          id: 'boostrap'
+        },
+        {
+          name: 'Mapbox',
+          id: 'mapbox'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
+        },
+        {
+          name: 'Highcharts',
+          id: 'highcharts'
         }
       ]
     },
@@ -32,20 +74,96 @@ const ProjectsContainer = () => {
       id: 'cme',
       technologies: [
         {
-          name: 'GraphQL',
-          id: 'graphql'
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'CODA',
+          id: 'coda'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
         }
       ]
     },
     {
-      title: 'Metaregistry',
+      title: 'toroto.com',
       description:
-        'Projecto demo donde su objetivo es centralizar y transparentizar los datos de la venta de bonos de carbono por medio de teselas, donde un bono de carbono equivale a una tesela en el territorio donde se emiten dichos bonos. La forma de volver segura esta infromación es por mediod de la blockchain devolviendo contratos únicos por cada bono de carbono vendido. En este proyecto colaboré desde el diseño en Figma hasta el front end del proyecto. La demo ha sido de sumo interés para empresas externas y podría desarrollarse algo más completo dentro de Toroto en un futuro.',
-      id: 'metaregistry',
+        'Colaboración para elaborar el rediseño del sitio oficial, donde apoyé en la realización de las siguientes secciones: projects, about toroto, nabvar y algunos componentes del home todo en responsive.',
+      id: 'toroto',
       technologies: [
+        {
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
         {
           name: 'GraphQL',
           id: 'graphql'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'Mapbox',
+          id: 'mapbox'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
         }
       ]
     },
@@ -56,8 +174,44 @@ const ProjectsContainer = () => {
       id: 'y-clipboard',
       technologies: [
         {
-          name: 'GraphQL',
-          id: 'graphql'
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          id: 'typescript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'Github',
+          id: 'github'
+        },
+        {
+          name: 'Tailwind',
+          id: 'tailwind'
+        },
+        {
+          name: 'Figma',
+          id: 'figma'
         }
       ]
     }

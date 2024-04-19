@@ -32,14 +32,16 @@ import cme6 from '@/public/projects/cme/cme6.png'
 import cme7 from '@/public/projects/cme/cme7.png'
 import cme8 from '@/public/projects/cme/cme8.png'
 
-import meta1 from '@/public/projects/metaregistry/meta1.png'
-import meta2 from '@/public/projects/metaregistry/meta2.png'
-import meta3 from '@/public/projects/metaregistry/meta3.png'
-import meta4 from '@/public/projects/metaregistry/meta4.png'
-import meta5 from '@/public/projects/metaregistry/meta5.png'
-import meta6 from '@/public/projects/metaregistry/meta6.png'
-import meta7 from '@/public/projects/metaregistry/meta7.png'
-import meta8 from '@/public/projects/metaregistry/meta8.png'
+import toroto1 from '@/public/projects/torotomx/toroto1.png'
+import toroto2 from '@/public/projects/torotomx/toroto2.png'
+import toroto3 from '@/public/projects/torotomx/toroto3.png'
+import toroto4 from '@/public/projects/torotomx/toroto4.png'
+import toroto5 from '@/public/projects/torotomx/toroto5.png'
+import toroto6 from '@/public/projects/torotomx/toroto6.png'
+import toroto7 from '@/public/projects/torotomx/toroto7.png'
+import toroto8 from '@/public/projects/torotomx/toroto8.png'
+import toroto9 from '@/public/projects/torotomx/toroto9.png'
+import toroto11 from '@/public/projects/torotomx/toroto11.png'
 
 import clipboard1 from '@/public/projects/y-clipboard/y-clipboard1.png'
 import clipboard2 from '@/public/projects/y-clipboard/y-clipboard2.png'
@@ -237,47 +239,57 @@ const getProjectsImages = (projectID: string) => {
 
       break
 
-    case 'metaregistry':
+    case 'toroto':
       images = [
         {
-          url: meta1,
-          id: 'meta1',
-          title: 'Initial view metaregistry'
+          url: toroto1,
+          id: 'toroto1',
+          title: 'Hero'
         },
         {
-          url: meta2,
-          id: 'meta2',
-          title: 'Pop up project'
+          url: toroto2,
+          id: 'toroto2',
+          title: 'Home component'
         },
         {
-          url: meta3,
-          id: 'meta3',
-          title: 'Zoom in to project view'
+          url: toroto3,
+          id: 'toroto3',
+          title: 'Project map home'
         },
         {
-          url: meta4,
-          id: 'meta4',
-          title: 'Sidepanel metaregistry'
+          url: toroto9,
+          id: 'toroto9',
+          title: 'Component home'
         },
         {
-          url: meta5,
-          id: 'meta5',
-          title: 'Layers component'
+          url: toroto4,
+          id: 'toroto4',
+          title: 'Component home'
         },
         {
-          url: meta6,
-          id: 'meta6',
-          title: 'Add carbon credits to buy'
+          url: toroto5,
+          id: 'toroto5',
+          title: 'Carousel'
         },
         {
-          url: meta7,
-          id: 'meta7',
-          title: 'Preview carbon credits PDF'
+          url: toroto6,
+          id: 'toroto6',
+          title: 'Blog cards'
         },
         {
-          url: meta8,
-          id: 'meta8',
-          title: 'Tiles preview'
+          url: toroto7,
+          id: 'toroto7',
+          title: 'About Toroto'
+        },
+        {
+          url: toroto8,
+          id: 'toroto8',
+          title: 'Team cards'
+        },
+        {
+          url: toroto11,
+          id: 'toroto11',
+          title: 'Projects map'
         }
       ]
       break
