@@ -13,7 +13,7 @@
 }
 
 .main {
-  height: $fill-window;
+  min-height: $fill-window;
   display: flex;
   flex-direction: column;
   gap: $size-38;
