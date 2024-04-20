@@ -10,7 +10,7 @@ const ProjectsContainer = () => {
     {
       title: 'Operations Dashboard',
       description:
-        'Dahsboard para monitorear proyectos de restauración ecológica. He colaborado con el front end del CMS que permite la subida de datos, así como también colaboré de forma muy activa en la realización del front end del Dahsboard en el cual se visualizan los datos por medio de gráficas en highcharts, mapa de actividad con mapbox, indicadores de avance, filtros con periodos, galería de imagénes, tabla de riesgos, funcionalidad para exportar documentos en PDF por periodos a elección, centro de documentos categorizados por carpetas y más funcionalidades que permiten a las empresas tener toda la información necesaria sobre el avance de cada proyecto. Este proyecto ha sido usado por grandes empresas como Coca-cola y Pachama, así como su versión anterior ha sido utilizada por Grupo Modelo.',
+        "Dashboard to monitoring ecological restoration projects. I colaborated with the front end of the CMS to allow data update, I colaborate on all front end sections of the Dahsboard. \n\n Within this the data is displayed with highcharts graphs, activity map with mapbox, KPI's, period filters, image gallery, risk table, functionality to export documents in PDF for periods of your choice, document center categorized by folders and more features that allow companies to have all the necessary about the progress of each project. \n\n The project has been used by big companies like Coca-cola and Pachama, its previous versions has bee used by AB InBev.",
       id: 'ops-dasboard',
       technologies: [
         {
@@ -70,7 +70,7 @@ const ProjectsContainer = () => {
     {
       title: 'Carbon monitoring engineering',
       description:
-        'Dashboard para manejar que cuentas de Toroto interesadas en medir sus emisiones de gases efecto invernadero agrupadas en tres alcances según aplique para cada caso particular. Donde las empresas contesta de forma ágil fomularios para facilitar y eficientar todo el flujo de trabajo desde la recolección de datos hasta la entrega de documentos que contiene dicha medición. Para agilizar su desarrollo se utilizó como CMS la herramienta llamada CODA en la cual los Key Account Manager sube, reciben y manipulan todos los datos para entregar al cliente. Esta plataforma ya ha sido usada en Italia y México.',
+        'Dashboard to manage Toroto accounts interested in measuring your CO₂ emissions agruped into three scopes as applicable for each particular case. \n\n In this dashboard companies answer forms in and agile way to make it easier and more efficient all work flow from data collection delivery of documents containing the until measurement. \n\n To speed up the development, the tool called CODA was used as a CMS where the Key Account Managers upload, receive and manipulate all data to deliver to the company. \n\n This dashboard has been used in Italy and México.',
       id: 'cme',
       technologies: [
         {
@@ -118,7 +118,7 @@ const ProjectsContainer = () => {
     {
       title: 'toroto.com',
       description:
-        'Colaboración para elaborar el rediseño del sitio oficial, donde apoyé en la realización de las siguientes secciones: projects, about toroto, nabvar y algunos componentes del home todo en responsive.',
+        'Collaboration to develop the redesign of the official Toroto site. I developed the front end of the following sections and components: projects, about Toroto, navbar, and some home components, all of this in responsive.',
       id: 'toroto',
       technologies: [
         {
@@ -170,7 +170,7 @@ const ProjectsContainer = () => {
     {
       title: 'Your clipboard',
       description:
-        'Proyecto realizado de forma independiente. Su objetivo principal es proporcionar un lugar donde guardar texto relevante copiado en el portapapeles, ofreciiendo la opción de gestionar como más te convenga los textos guardados, con las opciones de descargar todos estos textos o los más destacados, eliminar uno por uno o todos, y/o copiar solo un texto guardado. Todo esto mientras la pestaña se encuentre aciva. Plataforma lista para todos los dispositivos.',
+        'Independient project. Its principal objetive is provide a place to save relevant text copied from clipboard, offering the option to manager the save texts as most convenient, with options to download all these texts or only the favorites, copy each text you need, and/or delete each o all data. All this while page is active in your browser. Page ready for all devices.',
       id: 'y-clipboard',
       technologies: [
         {
