@@ -12,13 +12,13 @@ const skillsList = [
   { name: 'React js', id: 'react' },
   { name: 'Next js', id: 'nextjs' },
   { name: 'Tailwind', id: 'tailwind' },
-  { name: 'GraphQL', id: 'grapql' },
+  { name: 'GraphQL', id: 'graphql' },
   { name: 'Git', id: 'git' },
   { name: 'Github', id: 'github' },
   { name: 'GitLab', id: 'gitlab' },
   { name: 'Boostrap', id: 'boostrap' },
   { name: 'Firebase', id: 'firebase' },
-  { name: 'HTML5', id: 'materialui' },
+  { name: 'Material UI', id: 'materialui' },
   { name: 'JQuery', id: 'jquery' },
   { name: 'Mapbox', id: 'mapbox' },
   { name: 'Vercel', id: 'vercel' },
@@ -26,12 +26,12 @@ const skillsList = [
   { name: 'Highcharts', id: 'highcharts' },
   { name: 'Notion', id: 'notion' },
   { name: 'Coda', id: 'coda' },
-  { name: 'Miró', id: 'miro' },
+  { name: 'Miro', id: 'miro' },
   { name: 'Asana', id: 'asana' },
   { name: 'Trello', id: 'trello' },
-  { name: 'Miró', id: 'illustrator' },
-  { name: 'Asana', id: 'photoshop' },
-  { name: 'Trello', id: 'xd' }
+  { name: 'Illustrator', id: 'illustrator' },
+  { name: 'Photoshop', id: 'photoshop' },
+  { name: 'Adobe XD', id: 'xd' }
 ]
 
 const SkillsContainer = () => {
@@ -47,12 +47,20 @@ const SkillsContainer = () => {
           className={`${styles.content} ${styles.skills}`}
         >
           {skillsList.map(skill => (
-            <SVGComponent
-              icon={skill.id}
-              width='24'
-              height='24'
+            <div
               key={skill.id}
-            />
+              className={styles.skillContainer}
+            >
+              <SVGComponent
+                icon={skill.id}
+                width='24'
+                height='24'
+              />
+
+              <p className={styles.skillName}>
+                {skill.name}
+              </p>
+            </div>
           ))}
         </article>
       </section>
@@ -63,11 +71,12 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.softskills}`}
         >
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
-          <Paragraph text='SoftSkill' />
+          <Paragraph text='Creativity' />
+          <Paragraph text='Agile methodologies' />
+          <Paragraph text='Responsibility' />
+          <Paragraph text='Remote work' />
+          <Paragraph text='Sefl-learning skills' />
+          <Paragraph text='Perseverance' />
         </article>
       </section>
 
@@ -77,9 +86,9 @@ const SkillsContainer = () => {
         <article
           className={`${styles.content} ${styles.language}`}
         >
-          <Paragraph text='Inglés nivel técnico' />
+          <Paragraph text='Technical English' />
 
-          <Paragraph text='Español nativo' />
+          <Paragraph text='Native Spanish' />
         </article>
       </section>
     </div>

@@ -99,13 +99,15 @@
   position: fixed;
   bottom: $size-40;
   right: $size-10;
+  z-index: 2;
 }
 
-.buttonHome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: $size-30;
+.iconScrollEnd {
+  rotate: 180deg;
+}
+
+.iconScrollStart {
+  rotate: none;
 }
 
 @include responsive(l) {
@@ -118,6 +120,12 @@
         animation-name: opacity;
         animation-duration: 0.5s;
       }
+    }
+  }
+
+  .onlyIcon {
+    &:hover {
+      width: $size-58;
     }
   }
 }

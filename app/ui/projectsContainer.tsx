@@ -1,104 +1,246 @@
 'use client'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import styles from '@/app/ui/styles/projects.module.scss'
-import Title from './title'
-import Paragraph from './paragraph'
-import Image from 'next/image'
-import metaregistry1 from '@/public/projects/metaregistry.png'
-import ButtonAction from './buttons/buttonAction'
-import { SwiperSlide, Swiper } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import ProjectItem from './projectItem'
 
 const ProjectsContainer = () => {
+  const projectsList = [
+    {
+      title: 'Operations Dashboard',
+      description:
+        "Dashboard to monitoring ecological restoration projects. I colaborated with the front end of the CMS to allow data update, I colaborate on all front end sections of the Dahsboard. \n\n Within this the data is displayed with highcharts graphs, activity map with mapbox, KPI's, period filters, image gallery, risk table, functionality to export documents in PDF for periods of your choice, document center categorized by folders and more features that allow companies to have all the necessary about the progress of each project. \n\n The project has been used by big companies like Coca-cola and Pachama, its previous versions has bee used by AB InBev.",
+      id: 'ops-dasboard',
+      url: 'https://operations.toroto.com',
+      isDashboard: true,
+      technologies: [
+        {
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'GraphQL',
+          id: 'graphql'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'Boostrap',
+          id: 'boostrap'
+        },
+        {
+          name: 'Mapbox',
+          id: 'mapbox'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
+        },
+        {
+          name: 'Highcharts',
+          id: 'highcharts'
+        }
+      ]
+    },
+    {
+      title: 'Carbon monitoring engineering',
+      description:
+        'Dashboard to manage Toroto accounts interested in measuring your CO₂ emissions agruped into three scopes as applicable for each particular case. \n\n In this dashboard companies answer forms in and agile way to make it easier and more efficient all work flow from data collection delivery of documents containing the until measurement. \n\n To speed up the development, the tool called CODA was used as a CMS where the Key Account Managers upload, receive and manipulate all data to deliver to the company. \n\n This dashboard has been used in Italy and México.',
+      id: 'cme',
+      url: 'https://emissions.toroto.com',
+      isDashboard: true,
+      technologies: [
+        {
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'CODA',
+          id: 'coda'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
+        }
+      ]
+    },
+    {
+      title: 'toroto.com',
+      description:
+        'Collaboration to develop the redesign of the official Toroto site. I developed the front end of the following sections and components: projects, about Toroto, navbar, and some home components, all of this in responsive.',
+      id: 'toroto',
+      url: 'https://toroto.com/',
+      isDashboard: false,
+      technologies: [
+        {
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'Sass',
+          id: 'sass'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'GraphQL',
+          id: 'graphql'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'GitLab',
+          id: 'gitlab'
+        },
+        {
+          name: 'Mapbox',
+          id: 'mapbox'
+        },
+        {
+          name: 'Docker',
+          id: 'docker'
+        }
+      ]
+    },
+    {
+      title: 'Your clipboard',
+      description:
+        'Independient project. Its principal objetive is provide a place to save relevant text copied from clipboard, offering the option to manager the save texts as most convenient, with options to download all these texts or only the favorites, copy each text you need, and/or delete each o all data. All this while page is active in your browser. Page ready for all devices.',
+      id: 'y-clipboard',
+      url: 'https://your-clipboard-kappa.vercel.app',
+      isDashboard: false,
+      technologies: [
+        {
+          name: 'Javascript',
+          id: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          id: 'typescript'
+        },
+        {
+          name: 'HTML',
+          id: 'html'
+        },
+        {
+          name: 'CSS',
+          id: 'css'
+        },
+        {
+          name: 'React js',
+          id: 'react'
+        },
+        {
+          name: 'Next js',
+          id: 'nextjs'
+        },
+        {
+          name: 'Git',
+          id: 'git'
+        },
+        {
+          name: 'Github',
+          id: 'github'
+        },
+        {
+          name: 'Tailwind',
+          id: 'tailwind'
+        },
+        {
+          name: 'Figma',
+          id: 'figma'
+        }
+      ]
+    }
+  ]
+
   return (
     <section
       className={styles.main}
       id='projects'
     >
-      <article
-        className={styles.projectContainer}
-      >
-        <div className={styles.titleContainer}>
-          <Title text='Project Title' />
-        </div>
-
-        <div className={styles.textContainer}>
-          <div className={styles.title}>
-            <Title text='Project Title' />
-          </div>
-
-          <Paragraph
-            text='Donec sodales, sapien auctor fermentum
-      ullamcorper, risus lorem feugiat ligula, sed
-      volutpat lacus risus vel dolor. Praesent vel
-      justo nec neque dapibus imperdiet quis sit
-      amet odio. Mauris eu metus eu ipsum
-      facilisis finibus. Donec venenatis, mi a
-      auctor imperdiet, nulla est pretium orci, at
-      accumsan leo ex lobortis felis. Nulla id mi
-      feugiat, scelerisque ligula ut, bibendum
-      massa. Nam sagittis urna eget nunc
-      vulputate, vel fermentum tortor imperdiet.
-      Donec sed laoreet ligula, finibus luctus
-      lectus.'
-          />
-
-          <div className={styles.button}>
-            <ButtonAction
-              text='Ver proyecto'
-              disable={false}
-            />
-          </div>
-        </div>
-
-        <div className={styles.carouselContainer}>
-          <Swiper
-            navigation
-            modules={[Navigation]}
-            className='projectsSwiper'
-          >
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Image
-                src={metaregistry1}
-                alt='Project image'
-                width={350}
-                height={176}
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </article>
-
-      <article className={styles.technologies}>
-        <p className={styles.technologiesText}>
-          Technologies
-        </p>
-
-        <div>
-          <p>icon</p>
-          <p>icon</p>
-          <p>icon</p>
-        </div>
-      </article>
+      {projectsList?.map(project => (
+        <ProjectItem
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          technologies={project.technologies}
+          id={project.id}
+          url={project.url}
+          isDashboard={project.isDashboard}
+        />
+      ))}
     </section>
   )
 }

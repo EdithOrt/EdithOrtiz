@@ -1,4 +1,6 @@
 @import './ui/styles/variables.module.scss';
+@import './ui//styles/mixins.module.scss';
+
 :root {
   background: rgb(26, 27, 26);
   background: linear-gradient(
@@ -37,5 +39,31 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.swiper {
+  height: 100%;
+
+  .swiper-pagination-progressbar
+    .swiper-pagination-progressbar-fill {
+    background: $gray;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@include responsive(m) {
+  .swiper {
+    height: 100%;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      color: $gray;
+    }
   }
 }

@@ -3,35 +3,18 @@
 import { SVGComponent } from '../svgComponent'
 import styles from '@/app/ui/styles/buttons.module.scss'
 import { GetSectionContext } from '@/contexts/getSection'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 const ButtonScroll = () => {
-  const { section, updateSection } = useContext(
-    GetSectionContext
-  )
+  const { updateSection, flow, direction } =
+    useContext(GetSectionContext)
 
-  const onClick = (section: string) => {
+  const handleScroll = (value: string) => {
     let id = 'home'
-    switch (section) {
-      case 'home':
-        id = 'projects'
-        break
-      case 'projects':
-        id = 'skills'
-        break
-      case 'skills':
-        id = 'aboutMe'
-        break
-
-      case 'aboutMe':
-        id = 'contact'
-        break
-      case 'contact':
-        id = 'home'
-        break
-      default:
-        id = 'home'
-        break
+    if (value === 'start') {
+      id = 'contact'
+    } else if (value === 'end') {
+      id = 'home'
     }
 
     updateSection(id)
@@ -46,20 +29,71 @@ const ButtonScroll = () => {
         block: 'start'
       })
   }
+
+  useEffect(() => {
+    const home = document.getElementById('home')
+    const contact =
+      document.getElementById('contact')
+
+    const handleEvent = () => {
+      const homePositionY =
+        home?.getBoundingClientRect().y as number
+
+      const contactPositionY =
+        contact?.getBoundingClientRect()
+          .y as number
+
+      if (homePositionY >= -240) {
+        updateSection('home')
+      } else if (contactPositionY <= 240) {
+        updateSection('contact')
+      }
+    }
+
+    const timeOut = setTimeout(() => {
+      window.addEventListener(
+        'scroll',
+        handleEvent
+      )
+    }, 500)
+
+    return () => {
+      clearTimeout(timeOut)
+      window.removeEventListener(
+        'scroll',
+        handleEvent
+      )
+    }
+  }, [])
+
   return (
     <button
       className={styles.buttonScroll}
       onClick={() => {
-        onClick(section)
+        handleScroll(flow.current)
       }}
     >
-      <p>SCROLL</p>
+      <p>{`${
+        direction === 'buttom'
+          ? 'Home'
+          : 'Contact'
+      }`}</p>
 
-      <SVGComponent
-        icon='scroll'
-        width='16'
-        height='16'
-      />
+      <div
+        className={`${
+          direction === 'buttom' &&
+          styles.iconScrollEnd
+        } ${
+          direction === 'up' &&
+          styles.iconScrollStart
+        }`}
+      >
+        <SVGComponent
+          icon='scroll'
+          width='16'
+          height='16'
+        />
+      </div>
     </button>
   )
 }
