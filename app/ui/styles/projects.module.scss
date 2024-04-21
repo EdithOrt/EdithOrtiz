@@ -58,7 +58,7 @@
   padding: $container-padding;
   margin-top: $size-24;
   letter-spacing: $letter-spacing;
-  line-height: 110%;
+  line-height: 105%;
   width: 90%;
 
   .title {
@@ -67,6 +67,18 @@
 
   .button {
     margin-top: $size-30;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: $size-40;
+  }
+
+  .disclaimer {
+    margin-top: $size-12;
+    font-size: $size-14;
+    font-weight: $text-ligth;
   }
 }
 
