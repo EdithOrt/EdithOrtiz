@@ -10,13 +10,10 @@ const AboutMeContainer = () => {
   const downloadFile = () => {
     const pdfPath = '/EDITH-ORTIZ-CV-en.pdf'
 
-    // Create an anchor element
     const a = document.createElement('a')
     a.href = pdfPath
-    console.log(a)
-    a.download = 'document.pdf' // Set the filename
+    a.download = 'document.pdf'
 
-    // Programmatically trigger a click event on the anchor element
     a.click()
   }
   return (

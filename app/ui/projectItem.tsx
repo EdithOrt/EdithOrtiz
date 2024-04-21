@@ -26,14 +26,23 @@ const ProjectItem = ({
   description,
   url,
   technologies,
-  id
+  id,
+  isDashboard
 }: {
   title: string
   description: string
-  url?: string
+  url: string
   technologies: Array<TechnologiesType>
   id: string
+  isDashboard: boolean
 }) => {
+  const openURL = (path: string) => {
+    const a = document.createElement('a')
+    a.href = path
+    a.target = '_blank'
+
+    a.click()
+  }
   return (
     <div className={styles.projectItem}>
       <article
@@ -56,7 +65,14 @@ const ProjectItem = ({
                 text='Ver proyecto'
                 disable={false}
                 type='button'
+                onClick={() => openURL(url)}
               />
+
+              {isDashboard && (
+                <p className={styles.disclaimer}>
+                  Only access to login view.
+                </p>
+              )}
             </div>
           )}
         </div>
