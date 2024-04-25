@@ -54,6 +54,17 @@
   }
 }
 
+.buttonIconActive {
+  background-color: $white;
+  color: $black;
+
+  svg {
+    path {
+      fill: $black;
+    }
+  }
+}
+
 .buttonScroll {
   background-color: transparent;
   border: none;

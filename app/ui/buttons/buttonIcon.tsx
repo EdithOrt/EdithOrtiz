@@ -6,19 +6,23 @@ const ButtonIcon = ({
   id,
   withText,
   text,
-  iconName
+  iconName,
+  active
 }: {
   onClick: any
   id: string
   withText?: boolean
   text?: string
   iconName: string
+  active?: boolean
 }) => {
   return (
     <button
       className={`${styles.buttonIcon} ${
         styles.rightButton
-      } ${!withText && styles.onlyIcon}`}
+      } ${!withText && styles.onlyIcon} ${
+        active && styles.buttonIconActive
+      }`}
       onClick={() => onClick(id)}
     >
       <div className={styles.icon}>

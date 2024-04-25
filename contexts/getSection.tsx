@@ -31,15 +31,19 @@ const GetSectionProvider: React.FC<{
 
   const updateFlow = (newFlow: string) => {
     flow.current = newFlow
+
+    if (newFlow === 'start') {
+      setDirection('up')
+    } else {
+      setDirection('buttom')
+    }
   }
 
   useEffect(() => {
     if (section === 'home') {
       updateFlow('start')
-      setDirection('up')
     } else if (section === 'contact') {
       updateFlow('end')
-      setDirection('buttom')
     }
   }, [section])
 
