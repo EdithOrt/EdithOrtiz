@@ -5,6 +5,7 @@ import Title from './title'
 import Paragraph from './paragraph'
 import Image from 'next/image'
 import ButtonAction from './buttons/buttonAction'
+import edith from '@/public/edith-ortiz.png'
 
 const AboutMeContainer = () => {
   const downloadFile = () => {
@@ -32,10 +33,10 @@ const AboutMeContainer = () => {
 
         <div className={styles.photo}>
           <Image
-            src=''
+            src={edith}
             alt='Edith Ortiz photography'
-            width={113}
-            height={324}
+            width={1500}
+            height={1500}
           />
         </div>
 
@@ -64,10 +65,10 @@ const AboutMeContainer = () => {
 
       <div className={styles.photo}>
         <Image
-          src=''
+          src={edith}
           alt='Edith Ortiz photography'
-          width={113}
-          height={324}
+          width={1500}
+          height={1500}
         />
       </div>
     </section>

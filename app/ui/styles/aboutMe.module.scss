@@ -33,6 +33,13 @@
   .photo {
     display: block;
     width: 30%;
+    height: 50vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -86,5 +93,13 @@
 
   .photo {
     display: block;
+    width: 400px;
+    height: 100vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

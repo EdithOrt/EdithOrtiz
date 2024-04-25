@@ -6,8 +6,12 @@ import { GetSectionContext } from '@/contexts/getSection'
 import { useContext, useEffect } from 'react'
 
 const ButtonScroll = () => {
-  const { updateSection, flow, direction } =
-    useContext(GetSectionContext)
+  const {
+    updateSection,
+    flow,
+    direction,
+    updateFlow
+  } = useContext(GetSectionContext)
 
   const handleScroll = (value: string) => {
     let id = 'home'
@@ -43,10 +47,21 @@ const ButtonScroll = () => {
         contact?.getBoundingClientRect()
           .y as number
 
-      if (homePositionY >= -240) {
-        updateSection('home')
-      } else if (contactPositionY <= 240) {
-        updateSection('contact')
+      if (
+        homePositionY >= -240 &&
+        contactPositionY >= 5700
+      ) {
+        updateFlow('start')
+        return
+      }
+
+      if (
+        contactPositionY <= 240 &&
+        homePositionY <= -5700
+      ) {
+        updateFlow('end')
+
+        return
       }
     }
 

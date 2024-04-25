@@ -8,7 +8,7 @@ import { GetSectionContext } from '@/contexts/getSection'
 import { useContext } from 'react'
 
 export const Navbar = () => {
-  const { updateSection } = useContext(
+  const { updateSection, section } = useContext(
     GetSectionContext
   )
 
@@ -44,6 +44,7 @@ export const Navbar = () => {
     // Programmatically trigger a click event on the anchor element
     a.click()
   }
+
   return (
     <nav className={styles.main}>
       <div className={styles.containerButtons}>
@@ -66,6 +67,7 @@ export const Navbar = () => {
           withText
           text='Projects'
           iconName='projects'
+          active={section === 'projects'}
         />
         <ButtonIcon
           onClick={handleClick}
@@ -73,6 +75,7 @@ export const Navbar = () => {
           withText
           text='Skills'
           iconName='skills'
+          active={section === 'skills'}
         />
         <ButtonIcon
           onClick={handleClick}
@@ -80,6 +83,7 @@ export const Navbar = () => {
           withText
           text='About me'
           iconName='aboutMe'
+          active={section === 'aboutMe'}
         />
         <ButtonIcon
           onClick={handleClick}
@@ -87,6 +91,7 @@ export const Navbar = () => {
           withText
           text='Contact'
           iconName='contact'
+          active={section === 'contact'}
         />
       </div>
     </nav>
