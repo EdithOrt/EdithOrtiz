@@ -2,13 +2,15 @@
 
 import styles from '@/app/ui/styles/buttons.module.scss'
 
+interface ButtonTextProps {
+  onClick: any
+  id: string
+}
+
 const ButtonText = ({
   onClick,
   id
-}: {
-  onClick: any
-  id: string
-}) => {
+}: ButtonTextProps) => {
   return (
     <button
       className={`${styles.buttonText} ${styles.leftButton}`}
