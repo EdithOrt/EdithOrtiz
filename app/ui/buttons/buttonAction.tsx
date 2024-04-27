@@ -2,17 +2,19 @@ import styles from '@/app/ui/styles/buttons.module.scss'
 import { roboto } from '../fonts'
 import React from 'react'
 
+interface ButtonActionProps {
+  text: string
+  disable: boolean
+  type: 'button' | 'submit'
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+}
+
 const ButtonAction = ({
   text,
   disable,
   type,
   onClick
-}: {
-  text: string
-  disable: boolean
-  type: 'button' | 'submit'
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-}) => {
+}: ButtonActionProps) => {
   return (
     <button
       className={`${roboto.className} ${
