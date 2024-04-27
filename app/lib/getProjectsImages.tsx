@@ -54,7 +54,11 @@ import clipboard9 from '@/public/projects/y-clipboard/y-clipboard9.png'
 import clipboard10 from '@/public/projects/y-clipboard/y-clipboard10.png'
 import clipboard11 from '@/public/projects/y-clipboard/y-clipboard11.png'
 
-const getProjectsImages = (projectID: string) => {
+import { ProjectImage } from './types'
+
+const getProjectsImages = (
+  projectID: string
+): Array<ProjectImage> => {
   let images = [
     {
       url: ops1,
