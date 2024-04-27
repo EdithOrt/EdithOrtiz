@@ -13,7 +13,7 @@ const ButtonScroll = () => {
     updateFlow
   } = useContext(GetSectionContext)
 
-  const handleScroll = (value: string) => {
+  const handleScroll = (value: string): void => {
     let id = 'home'
     if (value === 'start') {
       id = 'contact'
