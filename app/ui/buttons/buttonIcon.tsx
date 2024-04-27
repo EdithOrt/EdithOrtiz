@@ -1,6 +1,15 @@
 import { SVGComponent } from '../svgComponent'
 import styles from '@/app/ui/styles/buttons.module.scss'
 
+interface ButtonIconProps {
+  onClick: any
+  id: string
+  withText?: boolean
+  text?: string
+  iconName: string
+  active?: boolean
+}
+
 const ButtonIcon = ({
   onClick,
   id,
@@ -8,14 +17,7 @@ const ButtonIcon = ({
   text,
   iconName,
   active
-}: {
-  onClick: any
-  id: string
-  withText?: boolean
-  text?: string
-  iconName: string
-  active?: boolean
-}) => {
+}: ButtonIconProps) => {
   return (
     <button
       className={`${styles.buttonIcon} ${
