@@ -4,9 +4,10 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import styles from '@/app/ui/styles/projects.module.scss'
 import ProjectItem from './projectItem'
+import { Project } from '../lib/types'
 
 const ProjectsContainer = () => {
-  const projectsList = [
+  const projectsList: Array<Project> = [
     {
       title: 'Operations Dashboard',
       description:
