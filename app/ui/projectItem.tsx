@@ -12,10 +12,7 @@ import Image from 'next/image'
 import ButtonAction from './buttons/buttonAction'
 import { SVGComponent } from './svgComponent'
 import getProjectsImages from '../lib/getProjectsImages'
-import { TechnologiesType } from '../lib/types'
 import { Project } from '../lib/types'
-
-type ImagesType = { url: string; id: string }
 
 const ProjectItem = ({
   title,
