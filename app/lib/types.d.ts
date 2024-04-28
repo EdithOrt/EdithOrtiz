@@ -16,3 +16,8 @@ export interface Project {
   isDashboard: boolean
   technologies: Array<TechnologiesType>
 }
+
+export interface Skill {
+  name: string
+  id: string
+}
