@@ -12,14 +12,7 @@ import Image from 'next/image'
 import ButtonAction from './buttons/buttonAction'
 import { SVGComponent } from './svgComponent'
 import getProjectsImages from '../lib/getProjectsImages'
-
-type ImagesType = { url: string; id: string }
-type TechnologiesType = {
-  name: string
-  id: string
-}
-
-// autoplay={{ delay: 5000 }}
+import { Project } from '../lib/types'
 
 const ProjectItem = ({
   title,
@@ -28,14 +21,7 @@ const ProjectItem = ({
   technologies,
   id,
   isDashboard
-}: {
-  title: string
-  description: string
-  url: string
-  technologies: Array<TechnologiesType>
-  id: string
-  isDashboard: boolean
-}) => {
+}: Project) => {
   const openURL = (path: string) => {
     const a = document.createElement('a')
     a.href = path

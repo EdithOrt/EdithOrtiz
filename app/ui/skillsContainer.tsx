@@ -2,8 +2,9 @@ import styles from '@/app/ui/styles/skills.module.scss'
 import Paragraph from './paragraph'
 import Title from './title'
 import { SVGComponent } from './svgComponent'
+import { Skill } from '../lib/types'
 
-const skillsList = [
+const skillsList: Array<Skill> = [
   { name: 'Javascript', id: 'javascript' },
   { name: 'Typescript', id: 'typescript' },
   { name: 'HTML5', id: 'html' },
